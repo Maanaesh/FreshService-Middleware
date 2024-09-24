@@ -2,7 +2,6 @@
 <head>
   <title>customSettingsPage</title>
   <link rel='stylesheet' type='text/css' href='https://static.freshdev.io/fdk/2.0/assets/freshservice.css'>
-  <link rel="stylesheet" type="text/css" href="./assets/iparams.css">
   <script type="module" src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.js"></script>
   <style>
@@ -19,48 +18,76 @@
     <input type='password' name='key' placeholder='' id="api-key" />
     
     <fw-button id="fetchFieldsBtn" loading="false">Validate Details</fw-button>
+    <label for="FreshServiceDropDown">Freshservice Fields</label>
     <fw-select
-          id="complexSelect"
-          label="Names"
+          id="FreshServiceDropDown"
           placeholder="Your choices"
           hint-text="Select multiple options"
           multiple="true",
           option-label-path="name"
           option-value-path="id"
         >
-</fw-select>
-    <!-- can  make the options better by adding something like this https://crayons.freshworks.com/components/core/select/#demo-->
-    <fw-button id="submit" loading="false">submit</fw-button>
+    </fw-select>
+    <label for="FreshDeskDropDown">FreshDesk Fields</label>
+    <fw-select
+          id="FreshDeskDropDown"
+          placeholder="Your choices"
+          hint-text="Select multiple options"
+          multiple="true",
+          option-label-path="name"
+          option-value-path="id"
+        >
+    </fw-select>
+      <div id="mappedFields"></div>
+      <fw-button id="mapFieldsBtn">Map Fields</fw-button>
+
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
 <script src="{{{appclient}}}"></script>
-<script src="./assets/iparams.js"></script>
 <script type="text/javascript">
+// DropDown to select Mappings
+let mappedFields={};
+document.getElementById('mapFieldsBtn').addEventListener('click',async function () {
+  const FreshServiceDropDown = document.getElementById('FreshServiceDropDown');
+  const FreshDeskDropDown = document.getElementById('FreshDeskDropDown');
 
-  
-  let selectedOptions = [];
-  document.getElementById("submit").addEventListener('click',async()=>{
-    const selected=document.getElementById("complexSelect");
-    selectedOptions= await selected.getSelectedItem();
+  const FS_SelectedFields = await FreshServiceDropDown.getSelectedItem();
+  const FD_SelectedFields = await FreshDeskDropDown.getSelectedItem();
+console.log(FreshServiceDropDown,FreshDeskDropDown);
+  if (FS_SelectedFields.length !== FD_SelectedFields.length) {
+    alert('Please select an equal number of fields on both sides.');
+    return;
+  }
+  const fieldMapping = {};
+  for (let i = 0; i < FS_SelectedFields.length; i++) {
+    fieldMapping[FS_SelectedFields[i].name] = FD_SelectedFields[i].name;
+  }
+  const mappedFieldsDiv = document.getElementById('mappedFields');
+  mappedFieldsDiv.innerHTML = ''; 
+  Object.entries(fieldMapping).forEach(([key, value]) => {
+    mappedFieldsDiv.innerHTML += `<p>${key} -> ${value}</p>`;
   });
 
-  // Fetch ticket fields when button is clicked
+  mappedFields=fieldMapping;
+  console.log(mappedFields)
+});
+
   document.getElementById('fetchFieldsBtn').addEventListener('click', async function() {
     const url = document.getElementById('url').value;
     const key = document.getElementById('api-key').value;
-    
-    // console.log("Button Clicked");
-    // console.log("URL:", url);
-    // console.log("API Key:", key);
-
+  
     if (validate()) {
         this.setAttribute("loading", "true"); 
         try {
-            const fieldData = await fillOptions(url, key);
-              console.log("Field Data:", fieldData);
-            populateFieldList(fieldData);
+            const FD_fieldData = await FD_getTicketFields(url, key);
+              console.log("FreshDesk Field Data:", FD_fieldData);
+              populateFieldList(FD_fieldData,"fd");
+
+            const FS_fieldData=await FS_getTicketFields("https://effy.freshservice.com","oHm1hbJZdgl2_uxSV5nL");
+            console.log("FreshService Field Data:", FS_fieldData);
+            populateFieldList(FS_fieldData,"fs");
         } catch (error) {
             console.error("Error while fetching fields:", error);
 
@@ -71,26 +98,7 @@
     }
 });
 
-
-  async function fillOptions(url, key) {
-    try {
-      const data = await getTicketFields(url, key);
-      const finalData = [];
-      data.forEach(element => {
-        finalData.push({
-          id: element.id,
-          name: element.label || element.name
-        });
-      });
-
-      return finalData;
-    } catch (error) {
-      console.error("Error fetching ticket fields:", error);
-      return [];
-    }
-  }
-
-  async function getTicketFields(url, key) {
+  async function FD_getTicketFields(url, key) {
     try {
       const res = await axios.get(`${url}/api/v2/ticket_fields`, {
         headers: {
@@ -101,8 +109,41 @@
           password: 'X'
         },
       });
-      document.getElementById("complexSelect").style.display = "block";
-      return res.data;
+      // document.getElementById("complexSelect").style.display = "block";
+      data=[];
+      res.data.forEach(element => {
+        data.push({
+          id:element.id,
+          name: element.label || element.name,
+        });
+      });
+      return data;
+    } catch (error) {
+      console.error("Error fetching ticket fields:", error);
+      return [];
+    }
+  }
+
+  async function FS_getTicketFields(url, key) {
+    try {
+      const res = await axios.get(`${url}/api/v2/ticket_form_fields`, {
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        auth: {
+          username: key,
+          password: 'X'
+        },
+      });
+      data=[];
+      const {ticket_fields}=res.data
+      ticket_fields.forEach(element => {
+        data.push({
+          id:element.id,
+          name: element.label || element.name,
+        });
+      });
+      return data;
     } catch (error) {
       console.error("Error fetching ticket fields:", error);
       return [];
@@ -114,26 +155,31 @@
     document.getElementById('url').value=configs['url'];
     document.getElementById('api-key').value=configs['key'];
     document.getElementById('fetchFieldsBtn').click();
-    document.getElementById('complexSelect').setSelectedOptions(configs['selectedFields'])
+    
+    console.log(Object.keys(configs['fieldmap']));
+    document.getElementById('FreshServiceDropDown').setSelectedValues(Object.keys(configs['fieldmap']));
+    console.log(Object.values(configs['fieldmap']));
+    document.getElementById('FreshDeskDropDown').setSelectedValues(Object.values(configs['fieldmap']));  
   }
-
-  
+   
+    
   function validate() {
     return true; 
   }
 
-  function populateFieldList(fieldData) {
-    document.getElementById("complexSelect").options=fieldData;
+  function populateFieldList(fieldData,prod) {
+    if(prod==="fd"){
+      document.getElementById("FreshDeskDropDown").options=fieldData;
+    }
+    if(prod==="fs"){
+      document.getElementById("FreshServiceDropDown").options=fieldData;
+    }
+   
   }
 
   function postConfigs() {
     const url = document.getElementById('url').value;
     const key = document.getElementById('api-key').value;
-
-    // console.log("URL:", url);
-    // console.log("API Key:", key);
-    // console.log("Selected Options:", selectedOptions);
-
     if (!validate(url, key)) {
         return; 
     }
@@ -141,7 +187,7 @@
     return {
       url,
       key,
-      selectedFields: selectedOptions, 
+      fieldmap: mappedFields, 
     };
   }
 

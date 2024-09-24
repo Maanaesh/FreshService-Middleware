@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">85% </span>
+                <span class="strong">92% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>17/20</span>
+                <span class='fraction'>23/25</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">84.21% </span>
+                <span class="strong">91.66% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>16/19</span>
+                <span class='fraction'>22/24</span>
             </div>
         
             
@@ -115,7 +115,22 @@
 <a name='L50'></a><a href='#L50'>50</a>
 <a name='L51'></a><a href='#L51'>51</a>
 <a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">Infinityx</span>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">Infinityx</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">Infinityx</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">Infinityx</span>
+<span class="cline-any cline-yes">Infinityx</span>
+<span class="cline-any cline-yes">Infinityx</span>
+<span class="cline-any cline-yes">Infinityx</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">Infinityx</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">Infinityx</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -124,14 +139,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">Infinityx</span>
 <span class="cline-any cline-yes">Infinityx</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">Infinityx</span>
-<span class="cline-any cline-yes">Infinityx</span>
-<span class="cline-any cline-yes">Infinityx</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">Infinityx</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">Infinityx</span>
+<span class="cline-any cline-yes">Infinityx</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">Infinityx</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">Infinityx</span>
 <span class="cline-any cline-yes">Infinityx</span>
@@ -143,27 +159,15 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">Infinityx</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">Infinityx</span>
 <span class="cline-any cline-yes">Infinityx</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">Infinityx</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4.417117661945961e+71x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">Infinityx</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">Infinityx</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -171,54 +175,56 @@
 &nbsp;
 exports = {
 &nbsp;
-  // args is a JSON block containing the payload information.
-  // args['iparam'] will contain the installation parameter values.
+  onAppInstallHandler: async function(args) {
+    try {
+      const map = args.iparams.fieldmap;
+      const FD_fields = Object.values(map);
+      const response = await axios.post(`http://localhost:3000/api/storeFieldMap`, {
+        map,
+        FD_fields
+      });
+&nbsp;
+      console.log('Field map sent on app install:', response.status);
+    } catch (error) {
+      console.log('Error during app install:');
+    }
+  },
+&nbsp;
   onTicketCreateHandler: async function(args) {
     const jsonObj = {};
-    const selectedFields = args.iparams.selectedFields;
+    const map = args.iparams.fieldmap;
+    const FS_fields = Object.keys(map); // Get FS_fields from map
 &nbsp;
     if (args.data &amp;&amp; args.data.ticket) {
-      selectedFields.forEach((field) =&gt; {
-        const fieldNameLower = field.name.toLowerCase(); 
+      // Iterate through FS_fields to extract corresponding ticket fields
+      FS_fields.forEach((field) =&gt; {
+        const fieldNameLower = field.toLowerCase(); // Make the field lowercase for case-insensitive comparison
 &nbsp;
-        
+        // Find matching ticket fields
         const ticketKeys = Object.keys(args.data.ticket).map(key =&gt; key.toLowerCase());
 &nbsp;
-       
         if (ticketKeys.includes(fieldNameLower)) {
           jsonObj[fieldNameLower] = args.data.ticket[fieldNameLower];
         } else <span class="missing-if-branch" title="else path not taken" >E</span>{
-<span class="cstat-no" title="statement not covered" >          console.log(`Field ${field.name} does not exist in ticket data.`);</span>
+<span class="cstat-no" title="statement not covered" >          console.log(`Field ${field} does not exist in ticket data.`);</span>
         }
       });
     } else <span class="missing-if-branch" title="else path not taken" >E</span>{
 <span class="cstat-no" title="statement not covered" >      console.error("Invalid selectedFields or ticket data.");</span>
     }
 &nbsp;
-   
     jsonObj["email"] = args.data.requester.email;
 &nbsp;
-    const api_key = args.iparams.key;
-    const url = args.iparams.url;
-&nbsp;
-  try {
-    // Making the POST request to create a ticket
-    const response = await axios.post(`http://localhost:3000/api/createTickets/`,{
-      url:url,
-      key:api_key,
-      ticket:jsonObj,
-    });
-    console.log('Success:', response.status);
-&nbsp;
-  } catch (error) {
-  
-<span class="cstat-no" title="statement not covered" >    console.log('Error Response:', error.response.status, error.response.data);</span>
-    } 
+    try {
+      const response = await axios.post(`http://localhost:3000/api/createTickets/`, {
+        FS_fields: jsonObj 
+      });
+      console.log('Success:', response.status, response?.data);
+    } catch (error) {
+      console.log('Error Response:', error.response?.status, error.response?.data);
+    }
   }
-&nbsp;
-}
-&nbsp;
-&nbsp;
+};
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -226,7 +232,7 @@ exports = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-09-24T05:33:10.568Z
+                at 2024-09-24T09:45:44.219Z
             </div>
         <script src="prettify.js"></script>
         <script>

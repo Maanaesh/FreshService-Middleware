@@ -5,6 +5,9 @@
       "events": {
         "onTicketCreate": {
           "handler": "onTicketCreateHandler"
+        } ,
+        "onAppInstall": {
+          "handler": "onAppInstallHandler"
         }
       }
     }

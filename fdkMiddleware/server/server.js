@@ -2,51 +2,53 @@ const axios = require('axios');
 
 exports = {
 
-  // args is a JSON block containing the payload information.
-  // args['iparam'] will contain the installation parameter values.
+  onAppInstallHandler: async function(args) {
+    try {
+      const map = args.iparams.fieldmap;
+      const FD_fields = Object.values(map);
+      const response = await axios.post(`http://localhost:3000/api/storeFieldMap`, {
+        map,
+        FD_fields
+      });
+
+      console.log('Field map sent on app install:', response.status);
+    } catch (error) {
+      console.log('Error during app install:');
+    }
+  },
+
   onTicketCreateHandler: async function(args) {
     const jsonObj = {};
-    const selectedFields = args.iparams.selectedFields;
+    const map = args.iparams.fieldmap;
+    const FS_fields = Object.keys(map); // Get FS_fields from map
 
     if (args.data && args.data.ticket) {
-      selectedFields.forEach((field) => {
-        const fieldNameLower = field.name.toLowerCase(); 
+      // Iterate through FS_fields to extract corresponding ticket fields
+      FS_fields.forEach((field) => {
+        const fieldNameLower = field.toLowerCase(); // Make the field lowercase for case-insensitive comparison
 
-        
+        // Find matching ticket fields
         const ticketKeys = Object.keys(args.data.ticket).map(key => key.toLowerCase());
 
-       
         if (ticketKeys.includes(fieldNameLower)) {
           jsonObj[fieldNameLower] = args.data.ticket[fieldNameLower];
         } else {
-          console.log(`Field ${field.name} does not exist in ticket data.`);
+          console.log(`Field ${field} does not exist in ticket data.`);
         }
       });
     } else {
       console.error("Invalid selectedFields or ticket data.");
     }
 
-   
     jsonObj["email"] = args.data.requester.email;
 
-    const api_key = args.iparams.key;
-    const url = args.iparams.url;
-
-  try {
-    // Making the POST request to create a ticket
-    const response = await axios.post(`http://localhost:3000/api/createTickets/`,{
-      url:url,
-      key:api_key,
-      ticket:jsonObj,
-    });
-    console.log('Success:', response.status);
-
-  } catch (error) {
-  
-    console.log('Error Response:', error.response.status, error.response.data);
-    } 
+    try {
+      const response = await axios.post(`http://localhost:3000/api/createTickets/`, {
+        FS_fields: jsonObj 
+      });
+      console.log('Success:', response.status, response?.data);
+    } catch (error) {
+      console.log('Error Response:', error.response?.status, error.response?.data);
+    }
   }
-
-}
-
-
+};

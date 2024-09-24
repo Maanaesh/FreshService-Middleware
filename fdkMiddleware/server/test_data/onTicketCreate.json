@@ -6,8 +6,8 @@
   "event": "onTicketCreate",
   "data": {
     "ticket": {
-      "subject": "Support Needed...",
-      "description": "<div>Some details on the issue ..</div>",
+      "subject": "Hello",
+      "description": "<div>test tkt</div>",
       "is_description_html_truncated": false,
       "description_text": "Some details on the issue ...",
       "is_description_text_truncated": false,
@@ -112,8 +112,8 @@
     },
     "requester": {
       "id": 5483,
-      "name": "Rachel",
-      "email": "rachel@freshservice.com",
+      "name": "John",
+      "email": "john@freshservice.com",
       "mobile": 7654367287,
       "phone": 4352789885,
       "language": "en",
