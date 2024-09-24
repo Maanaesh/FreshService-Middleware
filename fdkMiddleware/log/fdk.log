@@ -417,3 +417,1228 @@ Quit the server with Control-C.
 2024-09-24 10:53:22.525 +0530 [info] 
 To simulate product, app setup, and external events, visit - http://localhost:10001/web/test
 2024-09-24 10:53:22.525 +0530 [info] Populating test data with events found in the app
+2024-09-24 10:59:32.851 +0530 [debug] ([34mreport.js[0m) [31mGenerating hash for report.json file[0m
+2024-09-24 10:59:38.195 +0530 [debug] ([34mconfigs.js[0m) [31mloaded default configs as "{"updates":{"manifest_url":"https://cdn.freshdev.io/assets/fdk/updates.json","period":24},"log":{"level":"info"},"javascript":{"ecma_version":2020},"request":{"timeout":15000},"global_apps":{"enabled":false},"easel":{"enabled":false}}"[0m
+2024-09-24 10:59:38.198 +0530 [debug] ([34mconfigs.js[0m) [31mloaded global configs as "{"request":{"timeout":15000}}"[0m
+2024-09-24 10:59:38.198 +0530 [debug] ([34mconfigs.js[0m) [31mloaded local configs as "{"request":{"timeout":15000}}"[0m
+2024-09-24 10:59:38.198 +0530 [debug] ([34mconfigs.js[0m) [31mloaded env configs as "{"updates":{},"log":{},"javascript":{},"request":{"timeout":15000}}"[0m
+2024-09-24 10:59:38.199 +0530 [debug] ([34mconfigs.js[0m) [31mloaded resolved configs as "{"updates":{"manifest_url":"https://cdn.freshdev.io/assets/fdk/updates.json","period":24},"log":{"level":"info"},"javascript":{"ecma_version":2020},"request":{"timeout":15000},"global_apps":{"enabled":false},"easel":{"enabled":false}}"[0m
+2024-09-24 10:59:38.199 +0530 [debug] ([34mlogger.js[0m) [31mStarting FDK in node v18.20.4 on darwin[0m
+2024-09-24 10:59:38.199 +0530 [debug] ([34msequelize.js[0m) [31msetting up sqilite at "/Users/maanaeshswamy/FreshService-Middleware/fdkMiddleware/.fdk/store.sqlite"[0m
+2024-09-24 10:59:38.199 +0530 [debug] ([34mdata.js[0m) [31mRead {"version_details":{"cli":{"deprecated":{"version":"<9","message":"This FDK version has been deprecated. There will be no further feature updates to this version. For a seamless app-building experience, ensure to move to the latest FDK version. For more information, see https://developers.freshworks.com/docs/app-sdk/v2.3/freshdesk/migration-guide/#migrate-to-the-latest-platform-version."},"forced":{"version":"7.0.0","command":"npm install https://dl.freshdev.io/cli/fdk-7.0.0.tgz -g","message":"Your FDK version has been forced updated to v7.0.0, please visit https://community.developers.freshworks.com/t/fdk-v7-0-announcing-node-js-v12-and-es6-support/3606 to know more"},"latest":{"version":"9.2.0","command":"npm install https://cdn.freshdev.io/fdk/latest.tgz -g","message":"You are on the latest FDK version. For information on the features available as part of this FDK version, see https://developers.freshworks.com/docs/?tab=modules."}},"addon":{"version":"2.0.4","url":"https://cdn.freshdev.io/assets/fdk/addons/addon.zip"}},"last_updated":{"time_stamp":1727154496133}}[0m
+2024-09-24 10:59:38.199 +0530 [debug] ([34mupdater.js[0m) [31mlast check less than 24 hours ago, not looking for updates[0m
+2024-09-24 10:59:38.200 +0530 [debug] ([34mindex.js[0m) [31mrunning with opts {}[0m
+2024-09-24 10:59:38.202 +0530 [debug] ([34mdata.js[0m) [31mRead {"version_details":{"cli":{"deprecated":{"version":"<9","message":"This FDK version has been deprecated. There will be no further feature updates to this version. For a seamless app-building experience, ensure to move to the latest FDK version. For more information, see https://developers.freshworks.com/docs/app-sdk/v2.3/freshdesk/migration-guide/#migrate-to-the-latest-platform-version."},"forced":{"version":"7.0.0","command":"npm install https://dl.freshdev.io/cli/fdk-7.0.0.tgz -g","message":"Your FDK version has been forced updated to v7.0.0, please visit https://community.developers.freshworks.com/t/fdk-v7-0-announcing-node-js-v12-and-es6-support/3606 to know more"},"latest":{"version":"9.2.0","command":"npm install https://cdn.freshdev.io/fdk/latest.tgz -g","message":"You are on the latest FDK version. For information on the features available as part of this FDK version, see https://developers.freshworks.com/docs/?tab=modules."}},"addon":{"version":"2.0.4","url":"https://cdn.freshdev.io/assets/fdk/addons/addon.zip"}},"last_updated":{"time_stamp":1727154496133}}[0m
+2024-09-24 11:00:22.277 +0530 [info] 
+-----iparams.html------
+
+2024-09-24 11:00:22.279 +0530 [info] <html>
+<head>
+  <title>testapp</title>
+  <link rel='stylesheet' type='text/css' href='https://static.freshdev.io/fdk/2.0/assets/freshservice.css'>
+  
+  <style>
+  /* Put your custom style here */
+  </style>
+</head>
+<body>
+<div class='form'>
+  <form>
+    <input type='text' name='field1' placeholder='Your Name' />
+    <input type='email' name='field2' placeholder='Email Address' />
+  </form>
+</div>
+
+<script src="{{{appclient}}}"></script>
+
+<script type= "text/javascript">
+function getConfigs(configs) {
+  //write your code here
+};
+
+function validate() {
+  let isValid = true;
+  //write your code here
+  return isValid;
+};
+
+function postConfigs() {
+  //write your code here
+};
+</script>
+</body>
+</html>
+2024-09-24 11:00:22.282 +0530 [info] Existing 'iparams.json' was deleted.
+2024-09-24 11:00:22.284 +0530 [info] Existing 'Assets' folder was deleted.
+2024-09-24 11:00:22.285 +0530 [info] 
+File Saved
+2024-09-24 11:03:10.318 +0530 [debug] ([34mconfigs.js[0m) [31mloaded default configs as "{"updates":{"manifest_url":"https://cdn.freshdev.io/assets/fdk/updates.json","period":24},"log":{"level":"info"},"javascript":{"ecma_version":2020},"request":{"timeout":15000},"global_apps":{"enabled":false},"easel":{"enabled":false}}"[0m
+2024-09-24 11:03:10.322 +0530 [debug] ([34mconfigs.js[0m) [31mloaded global configs as "{"request":{"timeout":15000}}"[0m
+2024-09-24 11:03:10.322 +0530 [debug] ([34mconfigs.js[0m) [31mloaded local configs as "{"request":{"timeout":15000}}"[0m
+2024-09-24 11:03:10.323 +0530 [debug] ([34mconfigs.js[0m) [31mloaded env configs as "{"updates":{},"log":{},"javascript":{},"request":{"timeout":15000}}"[0m
+2024-09-24 11:03:10.323 +0530 [debug] ([34mconfigs.js[0m) [31mloaded resolved configs as "{"updates":{"manifest_url":"https://cdn.freshdev.io/assets/fdk/updates.json","period":24},"log":{"level":"info"},"javascript":{"ecma_version":2020},"request":{"timeout":15000},"global_apps":{"enabled":false},"easel":{"enabled":false}}"[0m
+2024-09-24 11:03:10.323 +0530 [debug] ([34mlogger.js[0m) [31mStarting FDK in node v18.20.4 on darwin[0m
+2024-09-24 11:03:10.323 +0530 [debug] ([34msequelize.js[0m) [31msetting up sqilite at "/Users/maanaeshswamy/FreshService-Middleware/fdkMiddleware/.fdk/store.sqlite"[0m
+2024-09-24 11:03:10.323 +0530 [debug] ([34mdata.js[0m) [31mRead {"version_details":{"cli":{"deprecated":{"version":"<9","message":"This FDK version has been deprecated. There will be no further feature updates to this version. For a seamless app-building experience, ensure to move to the latest FDK version. For more information, see https://developers.freshworks.com/docs/app-sdk/v2.3/freshdesk/migration-guide/#migrate-to-the-latest-platform-version."},"forced":{"version":"7.0.0","command":"npm install https://dl.freshdev.io/cli/fdk-7.0.0.tgz -g","message":"Your FDK version has been forced updated to v7.0.0, please visit https://community.developers.freshworks.com/t/fdk-v7-0-announcing-node-js-v12-and-es6-support/3606 to know more"},"latest":{"version":"9.2.0","command":"npm install https://cdn.freshdev.io/fdk/latest.tgz -g","message":"You are on the latest FDK version. For information on the features available as part of this FDK version, see https://developers.freshworks.com/docs/?tab=modules."}},"addon":{"version":"2.0.4","url":"https://cdn.freshdev.io/assets/fdk/addons/addon.zip"}},"last_updated":{"time_stamp":1727154496133}}[0m
+2024-09-24 11:03:10.323 +0530 [debug] ([34mupdater.js[0m) [31mlast check less than 24 hours ago, not looking for updates[0m
+2024-09-24 11:03:10.325 +0530 [debug] ([34mindex.js[0m) [31mrunning with opts {}[0m
+2024-09-24 11:03:10.438 +0530 [debug] ([34mdata.js[0m) [31mRead {"version_details":{"cli":{"deprecated":{"version":"<9","message":"This FDK version has been deprecated. There will be no further feature updates to this version. For a seamless app-building experience, ensure to move to the latest FDK version. For more information, see https://developers.freshworks.com/docs/app-sdk/v2.3/freshdesk/migration-guide/#migrate-to-the-latest-platform-version."},"forced":{"version":"7.0.0","command":"npm install https://dl.freshdev.io/cli/fdk-7.0.0.tgz -g","message":"Your FDK version has been forced updated to v7.0.0, please visit https://community.developers.freshworks.com/t/fdk-v7-0-announcing-node-js-v12-and-es6-support/3606 to know more"},"latest":{"version":"9.2.0","command":"npm install https://cdn.freshdev.io/fdk/latest.tgz -g","message":"You are on the latest FDK version. For information on the features available as part of this FDK version, see https://developers.freshworks.com/docs/?tab=modules."}},"addon":{"version":"2.0.4","url":"https://cdn.freshdev.io/assets/fdk/addons/addon.zip"}},"last_updated":{"time_stamp":1727154496133}}[0m
+2024-09-24 11:03:10.439 +0530 [debug] ([34mmanifest.js[0m) [31mReloading manifest with {"platform-version":"2.3","product":{"freshservice":{"events":{"onTicketCreate":{"handler":"onTicketCreateHandler"}}}},"engines":{"node":"18.20.4","fdk":"9.2.0"},"dependencies":{"axios":"0.21.1"}}.[0m
+2024-09-24 11:03:10.439 +0530 [debug] ([34mmanifest.js[0m) [31mInferred db,backend as features.[0m
+2024-09-24 11:03:10.448 +0530 [debug] ([34mdata.js[0m) [31mRead {"version_details":{"cli":{"deprecated":{"version":"<9","message":"This FDK version has been deprecated. There will be no further feature updates to this version. For a seamless app-building experience, ensure to move to the latest FDK version. For more information, see https://developers.freshworks.com/docs/app-sdk/v2.3/freshdesk/migration-guide/#migrate-to-the-latest-platform-version."},"forced":{"version":"7.0.0","command":"npm install https://dl.freshdev.io/cli/fdk-7.0.0.tgz -g","message":"Your FDK version has been forced updated to v7.0.0, please visit https://community.developers.freshworks.com/t/fdk-v7-0-announcing-node-js-v12-and-es6-support/3606 to know more"},"latest":{"version":"9.2.0","command":"npm install https://cdn.freshdev.io/fdk/latest.tgz -g","message":"You are on the latest FDK version. For information on the features available as part of this FDK version, see https://developers.freshworks.com/docs/?tab=modules."}},"addon":{"version":"2.0.4","url":"https://cdn.freshdev.io/assets/fdk/addons/addon.zip"}},"last_updated":{"time_stamp":1727154496133}}[0m
+2024-09-24 11:03:10.897 +0530 [debug] ([34mdata.js[0m) [31mRead {"version_details":{"cli":{"deprecated":{"version":"<9","message":"This FDK version has been deprecated. There will be no further feature updates to this version. For a seamless app-building experience, ensure to move to the latest FDK version. For more information, see https://developers.freshworks.com/docs/app-sdk/v2.3/freshdesk/migration-guide/#migrate-to-the-latest-platform-version."},"forced":{"version":"7.0.0","command":"npm install https://dl.freshdev.io/cli/fdk-7.0.0.tgz -g","message":"Your FDK version has been forced updated to v7.0.0, please visit https://community.developers.freshworks.com/t/fdk-v7-0-announcing-node-js-v12-and-es6-support/3606 to know more"},"latest":{"version":"9.2.0","command":"npm install https://cdn.freshdev.io/fdk/latest.tgz -g","message":"You are on the latest FDK version. For information on the features available as part of this FDK version, see https://developers.freshworks.com/docs/?tab=modules."}},"addon":{"version":"2.0.4","url":"https://cdn.freshdev.io/assets/fdk/addons/addon.zip"}},"last_updated":{"time_stamp":1727154496133}}[0m
+2024-09-24 11:03:11.250 +0530 [debug] ([34mvalidate.js[0m) [31masked to skip the following validations, [0m
+2024-09-24 11:03:11.250 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator actions[0m
+2024-09-24 11:03:11.250 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator requests[0m
+2024-09-24 11:03:11.251 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator app-dir[0m
+2024-09-24 11:03:11.251 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator config-dir[0m
+2024-09-24 11:03:11.251 +0530 [debug] ([34mconfig-dir.js[0m) [31mChecking to see if /Users/maanaeshswamy/FreshService-Middleware/fdkMiddleware/config/ exists.[0m
+2024-09-24 11:03:11.251 +0530 [debug] ([34mconfig-dir.js[0m) [31mFetched the following config files iparams.html[0m
+2024-09-24 11:03:11.251 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator custom-objects[0m
+2024-09-24 11:03:11.251 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator event[0m
+2024-09-24 11:03:11.254 +0530 [debug] ([34mevent.js[0m) [31mFound ["onTicketCreateHandler"] as exported functions.[0m
+2024-09-24 11:03:11.254 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator iparam[0m
+2024-09-24 11:03:11.260 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator lint[0m
+2024-09-24 11:03:11.260 +0530 [debug] ([34mlint.js[0m) [31mpassed fix flag: undefined[0m
+2024-09-24 11:03:11.261 +0530 [debug] ([34mlint.js[0m) [31mRunning the following lints on the file server/lib/handle-response.js : no-caller,no-process-env,complexity,max-nested-callbacks,handle-callback-err,no-eval,no-alert,no-debugger,no-unreachable,no-unpkg-cdn,no-unhandled-promise,no-logging-rejections,no-non-client-request-model,no-deprecated-apis,no-proxy-requests,no-dependency-mismatch,no-empty-function,no-unused-vars[0m
+2024-09-24 11:03:11.272 +0530 [debug] ([34mlint.js[0m) [31mRunning the following lints on the file server/server.js : no-caller,no-process-env,complexity,max-nested-callbacks,handle-callback-err,no-eval,no-alert,no-debugger,no-unreachable,no-unpkg-cdn,no-unhandled-promise,no-logging-rejections,no-non-client-request-model,no-deprecated-apis,no-proxy-requests,no-dependency-mismatch,no-empty-function,no-unused-vars[0m
+2024-09-24 11:03:11.274 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator manifest[0m
+2024-09-24 11:03:11.275 +0530 [debug] ([34mvalidate.js[0m) [31mskipping validator manifest-dependency[0m
+2024-09-24 11:03:11.275 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator oauth[0m
+2024-09-24 11:03:11.275 +0530 [debug] ([34mvalidate.js[0m) [31mskipping validator pkgsize[0m
+2024-09-24 11:03:11.275 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator schema[0m
+2024-09-24 11:03:11.275 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator version-check[0m
+2024-09-24 11:03:11.275 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator app-settings[0m
+2024-09-24 11:03:11.276 +0530 [debug] ([34mwatcher.js[0m) [31mPreparing to watch the following files ./config,./manifest.json[0m
+2024-09-24 11:03:11.278 +0530 [debug] ([34minstall.js[0m) [31mdependency installer called with {"axios":"0.21.1"}[0m
+2024-09-24 11:03:11.325 +0530 [debug] ([34minstall.js[0m) [31mPreparing to install the following dependencies axios@0.21.1[0m
+2024-09-24 11:03:11.325 +0530 [info] Installing dependencies...
+2024-09-24 11:03:11.928 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d"}[0m
+2024-09-24 11:03:11.928 +0530 [debug] ([34mcustom-objects.js[0m) [31mto force or not? undefined[0m
+2024-09-24 11:03:11.928 +0530 [debug] ([34mcustom-objects.js[0m) [31mbeginning to re-sync db[0m
+2024-09-24 11:03:11.987 +0530 [debug] ([34mindex.js[0m) [31mloading model at "/Users/maanaeshswamy/.nvm/versions/node/v18.20.4/lib/node_modules/fdk/lib/models/bigint-pivot.js"[0m
+2024-09-24 11:03:11.989 +0530 [debug] ([34mindex.js[0m) [31mloading model at "/Users/maanaeshswamy/.nvm/versions/node/v18.20.4/lib/node_modules/fdk/lib/models/entity-field-choice.js"[0m
+2024-09-24 11:03:11.989 +0530 [debug] ([34mindex.js[0m) [31mloading model at "/Users/maanaeshswamy/.nvm/versions/node/v18.20.4/lib/node_modules/fdk/lib/models/entity-field.js"[0m
+2024-09-24 11:03:11.990 +0530 [debug] ([34mindex.js[0m) [31mloading model at "/Users/maanaeshswamy/.nvm/versions/node/v18.20.4/lib/node_modules/fdk/lib/models/entity.js"[0m
+2024-09-24 11:03:11.990 +0530 [debug] ([34mindex.js[0m) [31mloading model at "/Users/maanaeshswamy/.nvm/versions/node/v18.20.4/lib/node_modules/fdk/lib/models/record.js"[0m
+2024-09-24 11:03:11.991 +0530 [debug] ([34mindex.js[0m) [31mloading model at "/Users/maanaeshswamy/.nvm/versions/node/v18.20.4/lib/node_modules/fdk/lib/models/string-pivot.js"[0m
+2024-09-24 11:03:11.996 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d"}[0m
+2024-09-24 11:03:11.996 +0530 [debug] ([34mcustom-objects.js[0m) [31mupdated local store with latest entity hash[0m
+2024-09-24 11:03:11.996 +0530 [info] Starting local testing server at http://*:10001/    
+Append 'dev=true' to your Freshservice account URL to start testing    
+e.g. https://domain.freshservice.com/helpdesk/tickets/1?dev=true    
+Quit the server with Control-C.
+2024-09-24 11:03:11.996 +0530 [info] 
+To test the installation page, visit - http://localhost:10001/custom_configs
+2024-09-24 11:03:11.996 +0530 [info] 
+To simulate product, app setup, and external events, visit - http://localhost:10001/web/test
+2024-09-24 11:03:11.996 +0530 [info] Populating test data with events found in the app
+2024-09-24 11:03:15.391 +0530 [debug] ([34miframe.js[0m) [31mChecking is authorized for all oauths [0m
+2024-09-24 11:03:15.392 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d"}[0m
+2024-09-24 11:03:15.394 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d"}[0m
+2024-09-24 11:03:15.394 +0530 [debug] ([34miframe.js[0m) [31mResponding to product with {"configs":{},"displayName":"fdkMiddleware","product":{"freshservice":{"events":{"onTicketCreate":{"handler":"onTicketCreateHandler"}}}},"modules":{},"features":["db","backend"],"actions":false,"omni":false,"products":["freshservice"],"platform":"2.3","isInstall":true,"oauth_configs_list":[],"isAuthorized":"NA","v2":[]}[0m
+2024-09-24 11:03:15.402 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d"}[0m
+2024-09-24 11:03:15.406 +0530 [debug] ([34miframe.js[0m) [31mChecking is authorized for all oauths [0m
+2024-09-24 11:03:15.406 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d"}[0m
+2024-09-24 11:03:15.406 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d"}[0m
+2024-09-24 11:03:15.407 +0530 [debug] ([34miframe.js[0m) [31mResponding to product with {"configs":{},"displayName":"fdkMiddleware","product":{"freshservice":{"events":{"onTicketCreate":{"handler":"onTicketCreateHandler"}}}},"modules":{},"features":["db","backend"],"actions":false,"omni":false,"products":["freshservice"],"platform":"2.3","isInstall":true,"oauth_configs_list":[],"isAuthorized":"NA","v2":[]}[0m
+2024-09-24 11:03:19.220 +0530 [debug] ([34miframe.js[0m) [31mChecking is authorized for all oauths [0m
+2024-09-24 11:03:19.221 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d"}[0m
+2024-09-24 11:03:19.221 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d"}[0m
+2024-09-24 11:03:19.221 +0530 [debug] ([34miframe.js[0m) [31mResponding to product with {"configs":{},"displayName":"fdkMiddleware","product":{"freshservice":{"events":{"onTicketCreate":{"handler":"onTicketCreateHandler"}}}},"modules":{},"features":["db","backend"],"actions":false,"omni":false,"products":["freshservice"],"platform":"2.3","isInstall":true,"oauth_configs_list":[],"isAuthorized":"NA","v2":[]}[0m
+2024-09-24 11:03:19.222 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d"}[0m
+2024-09-24 11:03:19.225 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d"}[0m
+2024-09-24 11:04:19.158 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d"}[0m
+2024-09-24 11:05:49.266 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"config/iparams.html"}" to all listeners.[0m
+2024-09-24 11:07:53.213 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"config/iparams.html"}" to all listeners.[0m
+2024-09-24 11:08:51.242 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"config/iparams.html"}" to all listeners.[0m
+2024-09-24 11:12:32.231 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"config/iparams.html"}" to all listeners.[0m
+2024-09-24 11:12:40.186 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d","fdkmid_101_101_freshservice":{"fdkmid_101_101_custom_iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject","checkbox":false,"hideTick":false,"variant":"standard","selected":true,"disabled":false,"allowDeselect":true},{"id":60000418219,"name":"Status","checkbox":false,"hideTick":false,"variant":"standard","selected":true,"disabled":false,"allowDeselect":true},{"id":60000418220,"name":"Priority","checkbox":false,"hideTick":false,"variant":"standard","selected":true,"disabled":false,"allowDeselect":true},{"id":60000418224,"name":"Description","checkbox":false,"hideTick":false,"variant":"standard","selected":true,"disabled":false,"allowDeselect":true}]}}}[0m
+2024-09-24 11:16:48.574 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d","fdkmid_101_101_freshservice":{"fdkmid_101_101_custom_iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]}}}[0m
+2024-09-24 11:16:48.575 +0530 [debug] ([34mbeevents.js[0m) [31mUsing {"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]} as iparams for testing.[0m
+2024-09-24 11:16:48.575 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d","fdkmid_101_101_freshservice":{"fdkmid_101_101_custom_iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]}}}[0m
+2024-09-24 11:16:48.575 +0530 [debug] ([34mbeevents.js[0m) [31mUsing {} as app settings for testing.[0m
+2024-09-24 11:16:48.575 +0530 [debug] ([34mbeevents.js[0m) [31mCalling event handler with {"categoryName":"productEvent","categoryArgs":{"methodName":"onTicketCreate","methodParams":{"account_id":"1","domain":"sample.freshservice.com","timestamp":1496400354326,"region":"US","event":"onTicketCreate","data":{"ticket":{"subject":"Support Needed...","description":"<div>Some details on the issue ..</div>","is_description_html_truncated":false,"description_text":"Some details on the issue ...","is_description_text_truncated":false,"due_by":"2015-07-14T13:08:06Z","fr_due_by":"2015-07-14T13:08:06Z","fr_escalated":false,"is_escalated":false,"fwd_emails":["charles@freshservice.com","diana@freshservice.com"],"reply_cc_emails":["charles@freshservice.com","diana@freshservice.com"],"email_config_id":77123,"id":1,"group_id":351,"group_name":"Service Desk","department_id":2,"department_name":"HR","requester_id":5483,"requester_name":"Rachel","responder_id":320,"responder_email":"andrea@freshservice.com","responder_name":"Andrea","status":2,"status_name":"Open","priority":1,"priority_name":"Low","urgency":1,"urgency_name":"Low","impact":1,"impact_name":"Low","type":1,"type_name":"Incident","tags":["sales","marketing"],"spam":false,"source":2,"source_name":"Portal","category":"Hardware","sub_category":"Laptop","item_category":"Mac","cc_emails":["ram@freshservice.com","diana@freshservice.com"],"created_at":"2015-07-09T13:08:06Z","updated_at":"2015-07-09T13:08:06Z","attachments":[{"name":"sample.jpg","attachment_url":"https://s3.amazonaws.com/cdn.freshservice.com/data/helpdesk/attachments/production/9019290053/original/sample.jpg"}],"problem":{"id":1223,"name":"Problem in..."},"change":{"id":13442,"name":"Change for..."},"associated_changes":[{"id":1234,"name":"Test change 1234"},{"id":5678,"name":"Test change 5678"}],"assets":[{"asset_id":1,"asset_name":"Laptop","asset_impact":"High"}],"custom_fields":[{"name":"Org code","label":"Org code","column":"ffs_04","type":"dropdown","value":"XMO_12"},{"name":"RCA","label":"RCA","column":"ffs_05","type":"dropdown","value":"fix steps were..."}],"workspace_id":2,"workspace_name":"IT"},"requester":{"id":5483,"name":"Rachel","email":"rachel@freshservice.com","mobile":7654367287,"phone":4352789885,"language":"en","created_at":"2015-03-28T09:08:16Z"},"actor":{"profile_id":27000015175}},"iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]},"app_settings":{}}}}[0m
+2024-09-24 11:16:48.577 +0530 [debug] ([34mcoverage.js[0m) [31mInstrumenting /Users/maanaeshswamy/FreshService-Middleware/fdkMiddleware/server/server.js[0m
+2024-09-24 11:16:49.157 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:38.139 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d","fdkmid_101_101_freshservice":{"fdkmid_101_101_custom_iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]}}}[0m
+2024-09-24 11:17:38.140 +0530 [debug] ([34mbeevents.js[0m) [31mUsing {"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]} as iparams for testing.[0m
+2024-09-24 11:17:38.141 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d","fdkmid_101_101_freshservice":{"fdkmid_101_101_custom_iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]}}}[0m
+2024-09-24 11:17:38.141 +0530 [debug] ([34mbeevents.js[0m) [31mUsing {} as app settings for testing.[0m
+2024-09-24 11:17:38.141 +0530 [debug] ([34mbeevents.js[0m) [31mCalling event handler with {"categoryName":"productEvent","categoryArgs":{"methodName":"onTicketCreate","methodParams":{"account_id":"1","domain":"sample.freshservice.com","timestamp":1496400354326,"region":"US","event":"onTicketCreate","data":{"ticket":{"subject":"Support Needed...","description":"<div>Some details on the issue ..</div>","is_description_html_truncated":false,"description_text":"Some details on the issue ...","is_description_text_truncated":false,"due_by":"2015-07-14T13:08:06Z","fr_due_by":"2015-07-14T13:08:06Z","fr_escalated":false,"is_escalated":false,"fwd_emails":["charles@freshservice.com","diana@freshservice.com"],"reply_cc_emails":["charles@freshservice.com","diana@freshservice.com"],"email_config_id":77123,"id":1,"group_id":351,"group_name":"Service Desk","department_id":2,"department_name":"HR","requester_id":5483,"requester_name":"Rachel","responder_id":320,"responder_email":"andrea@freshservice.com","responder_name":"Andrea","status":2,"status_name":"Open","priority":1,"priority_name":"Low","urgency":1,"urgency_name":"Low","impact":1,"impact_name":"Low","type":1,"type_name":"Incident","tags":["sales","marketing"],"spam":false,"source":2,"source_name":"Portal","category":"Hardware","sub_category":"Laptop","item_category":"Mac","cc_emails":["ram@freshservice.com","diana@freshservice.com"],"created_at":"2015-07-09T13:08:06Z","updated_at":"2015-07-09T13:08:06Z","attachments":[{"name":"sample.jpg","attachment_url":"https://s3.amazonaws.com/cdn.freshservice.com/data/helpdesk/attachments/production/9019290053/original/sample.jpg"}],"problem":{"id":1223,"name":"Problem in..."},"change":{"id":13442,"name":"Change for..."},"associated_changes":[{"id":1234,"name":"Test change 1234"},{"id":5678,"name":"Test change 5678"}],"assets":[{"asset_id":1,"asset_name":"Laptop","asset_impact":"High"}],"custom_fields":[{"name":"Org code","label":"Org code","column":"ffs_04","type":"dropdown","value":"XMO_12"},{"name":"RCA","label":"RCA","column":"ffs_05","type":"dropdown","value":"fix steps were..."}],"workspace_id":2,"workspace_name":"IT"},"requester":{"id":5483,"name":"Rachel","email":"rachel@freshservice.com","mobile":7654367287,"phone":4352789885,"language":"en","created_at":"2015-03-28T09:08:16Z"},"actor":{"profile_id":27000015175}},"iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]},"app_settings":{}}}}[0m
+2024-09-24 11:17:38.142 +0530 [debug] ([34mcoverage.js[0m) [31mInstrumenting /Users/maanaeshswamy/FreshService-Middleware/fdkMiddleware/server/server.js[0m
+2024-09-24 11:17:38.672 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:38.752 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:39.253 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:39.754 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:40.254 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:40.755 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:41.256 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:41.758 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:42.260 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:42.760 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:43.261 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:43.762 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:44.263 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:44.766 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:45.267 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:45.767 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:46.269 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:46.771 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:47.272 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:47.773 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:48.273 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:48.774 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:49.275 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:49.775 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:50.276 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:50.776 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:51.278 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:51.778 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:52.279 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:52.781 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:53.281 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:53.782 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:54.283 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:54.784 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:55.285 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:55.786 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:56.287 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:56.788 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:57.289 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:57.789 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:58.291 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:58.792 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:59.292 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:17:59.804 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:00.303 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:00.805 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:01.306 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:01.806 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:02.307 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:02.808 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:03.309 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:03.810 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:04.312 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:04.812 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:05.313 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:05.814 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:06.315 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:06.815 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:07.317 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:07.818 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:08.319 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:08.820 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:09.321 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:09.822 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:10.323 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:10.825 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:11.326 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:11.828 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:12.330 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:12.830 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:13.330 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:13.831 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:14.334 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:14.834 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:15.334 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:15.835 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:16.336 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:16.837 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:17.338 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:17.839 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:18.340 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:18.840 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:19.341 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:19.842 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:20.343 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:20.844 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:21.345 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:21.845 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:22.347 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:22.848 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:23.349 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:23.850 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:24.351 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:24.853 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:25.352 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:25.854 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:26.355 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:26.856 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:27.358 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:27.858 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:28.358 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:28.860 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:29.360 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:29.862 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:30.363 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:30.864 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:31.365 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:31.866 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:32.368 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:32.868 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:33.369 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:33.871 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:34.372 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:34.873 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:35.375 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:35.876 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:36.378 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:36.887 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:36.893 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d","fdkmid_101_101_freshservice":{"fdkmid_101_101_custom_iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]}}}[0m
+2024-09-24 11:18:36.893 +0530 [debug] ([34mbeevents.js[0m) [31mUsing {"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]} as iparams for testing.[0m
+2024-09-24 11:18:36.893 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d","fdkmid_101_101_freshservice":{"fdkmid_101_101_custom_iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]}}}[0m
+2024-09-24 11:18:36.893 +0530 [debug] ([34mbeevents.js[0m) [31mUsing {} as app settings for testing.[0m
+2024-09-24 11:18:36.893 +0530 [debug] ([34mbeevents.js[0m) [31mCalling event handler with {"categoryName":"productEvent","categoryArgs":{"methodName":"onTicketCreate","methodParams":{"account_id":"1","domain":"sample.freshservice.com","timestamp":1496400354326,"region":"US","event":"onTicketCreate","data":{"ticket":{"subject":"Support Needed...","description":"<div>Some details on the issue ..</div>","is_description_html_truncated":false,"description_text":"Some details on the issue ...","is_description_text_truncated":false,"due_by":"2015-07-14T13:08:06Z","fr_due_by":"2015-07-14T13:08:06Z","fr_escalated":false,"is_escalated":false,"fwd_emails":["charles@freshservice.com","diana@freshservice.com"],"reply_cc_emails":["charles@freshservice.com","diana@freshservice.com"],"email_config_id":77123,"id":1,"group_id":351,"group_name":"Service Desk","department_id":2,"department_name":"HR","requester_id":5483,"requester_name":"Rachel","responder_id":320,"responder_email":"andrea@freshservice.com","responder_name":"Andrea","status":2,"status_name":"Open","priority":1,"priority_name":"Low","urgency":1,"urgency_name":"Low","impact":1,"impact_name":"Low","type":1,"type_name":"Incident","tags":["sales","marketing"],"spam":false,"source":2,"source_name":"Portal","category":"Hardware","sub_category":"Laptop","item_category":"Mac","cc_emails":["ram@freshservice.com","diana@freshservice.com"],"created_at":"2015-07-09T13:08:06Z","updated_at":"2015-07-09T13:08:06Z","attachments":[{"name":"sample.jpg","attachment_url":"https://s3.amazonaws.com/cdn.freshservice.com/data/helpdesk/attachments/production/9019290053/original/sample.jpg"}],"problem":{"id":1223,"name":"Problem in..."},"change":{"id":13442,"name":"Change for..."},"associated_changes":[{"id":1234,"name":"Test change 1234"},{"id":5678,"name":"Test change 5678"}],"assets":[{"asset_id":1,"asset_name":"Laptop","asset_impact":"High"}],"custom_fields":[{"name":"Org code","label":"Org code","column":"ffs_04","type":"dropdown","value":"XMO_12"},{"name":"RCA","label":"RCA","column":"ffs_05","type":"dropdown","value":"fix steps were..."}],"workspace_id":2,"workspace_name":"IT"},"requester":{"id":5483,"name":"Rachel","email":"rachel@freshservice.com","mobile":7654367287,"phone":4352789885,"language":"en","created_at":"2015-03-28T09:08:16Z"},"actor":{"profile_id":27000015175}},"iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]},"app_settings":{}}}}[0m
+2024-09-24 11:18:36.893 +0530 [debug] ([34mcoverage.js[0m) [31mInstrumenting /Users/maanaeshswamy/FreshService-Middleware/fdkMiddleware/server/server.js[0m
+2024-09-24 11:18:37.389 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:37.414 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:37.891 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:38.392 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:38.893 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:39.395 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:39.895 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:40.397 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:40.897 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:41.398 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:41.900 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:42.400 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:42.901 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:43.401 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:43.902 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:44.404 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:44.904 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:45.405 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:45.905 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:46.406 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:46.908 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:47.408 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:47.910 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:48.411 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:48.912 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:49.412 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:49.913 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:50.414 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:50.916 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:51.416 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:51.917 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:52.419 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:52.921 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:53.421 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:53.922 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:54.422 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:54.923 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:55.423 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:55.924 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:56.425 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:56.926 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:57.428 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:57.929 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:58.430 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:58.932 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:59.434 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:18:59.933 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:00.434 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:00.937 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:01.438 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:01.939 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:02.440 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:02.941 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:03.442 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:03.943 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:04.444 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:04.945 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:05.447 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:05.947 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:06.447 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:06.947 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:07.447 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:07.948 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:08.449 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:08.950 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:09.451 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:09.953 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:10.454 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:10.954 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:11.455 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:11.957 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:12.458 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:12.959 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:13.459 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:13.961 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:14.461 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:14.962 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:15.463 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:15.964 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:16.465 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:16.966 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:17.466 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:17.968 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:18.469 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:18.969 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:19.469 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:19.971 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:20.472 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:20.973 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:21.048 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d","fdkmid_101_101_freshservice":{"fdkmid_101_101_custom_iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]}}}[0m
+2024-09-24 11:19:21.048 +0530 [debug] ([34mbeevents.js[0m) [31mUsing {"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]} as iparams for testing.[0m
+2024-09-24 11:19:21.048 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d","fdkmid_101_101_freshservice":{"fdkmid_101_101_custom_iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]}}}[0m
+2024-09-24 11:19:21.048 +0530 [debug] ([34mbeevents.js[0m) [31mUsing {} as app settings for testing.[0m
+2024-09-24 11:19:21.048 +0530 [debug] ([34mbeevents.js[0m) [31mCalling event handler with {"categoryName":"productEvent","categoryArgs":{"methodName":"onTicketCreate","methodParams":{"account_id":"1","domain":"sample.freshservice.com","timestamp":1496400354326,"region":"US","event":"onTicketCreate","data":{"ticket":{"subject":"Support Needed...","description":"<div>Some details on the issue ..</div>","is_description_html_truncated":false,"description_text":"Some details on the issue ...","is_description_text_truncated":false,"due_by":"2015-07-14T13:08:06Z","fr_due_by":"2015-07-14T13:08:06Z","fr_escalated":false,"is_escalated":false,"fwd_emails":["charles@freshservice.com","diana@freshservice.com"],"reply_cc_emails":["charles@freshservice.com","diana@freshservice.com"],"email_config_id":77123,"id":1,"group_id":351,"group_name":"Service Desk","department_id":2,"department_name":"HR","requester_id":5483,"requester_name":"Rachel","responder_id":320,"responder_email":"andrea@freshservice.com","responder_name":"Andrea","status":2,"status_name":"Open","priority":1,"priority_name":"Low","urgency":1,"urgency_name":"Low","impact":1,"impact_name":"Low","type":1,"type_name":"Incident","tags":["sales","marketing"],"spam":false,"source":2,"source_name":"Portal","category":"Hardware","sub_category":"Laptop","item_category":"Mac","cc_emails":["ram@freshservice.com","diana@freshservice.com"],"created_at":"2015-07-09T13:08:06Z","updated_at":"2015-07-09T13:08:06Z","attachments":[{"name":"sample.jpg","attachment_url":"https://s3.amazonaws.com/cdn.freshservice.com/data/helpdesk/attachments/production/9019290053/original/sample.jpg"}],"problem":{"id":1223,"name":"Problem in..."},"change":{"id":13442,"name":"Change for..."},"associated_changes":[{"id":1234,"name":"Test change 1234"},{"id":5678,"name":"Test change 5678"}],"assets":[{"asset_id":1,"asset_name":"Laptop","asset_impact":"High"}],"custom_fields":[{"name":"Org code","label":"Org code","column":"ffs_04","type":"dropdown","value":"XMO_12"},{"name":"RCA","label":"RCA","column":"ffs_05","type":"dropdown","value":"fix steps were..."}],"workspace_id":2,"workspace_name":"IT"},"requester":{"id":5483,"name":"Rachel","email":"rachel@freshservice.com","mobile":7654367287,"phone":4352789885,"language":"en","created_at":"2015-03-28T09:08:16Z"},"actor":{"profile_id":27000015175}},"iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]},"app_settings":{}}}}[0m
+2024-09-24 11:19:21.049 +0530 [debug] ([34mcoverage.js[0m) [31mInstrumenting /Users/maanaeshswamy/FreshService-Middleware/fdkMiddleware/server/server.js[0m
+2024-09-24 11:19:21.473 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:21.573 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:21.975 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:22.477 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:22.977 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:23.479 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:23.980 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:24.480 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:24.981 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:25.482 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:25.984 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:26.485 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:26.985 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:27.487 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:27.987 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:28.489 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:28.991 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:29.493 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:29.994 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:30.494 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:30.995 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:31.496 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:31.998 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:32.498 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:33.000 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:33.500 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:34.002 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:34.503 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:35.005 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:35.505 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:36.006 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:36.507 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:37.008 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:37.509 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:38.010 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:38.512 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:39.013 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:39.515 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:40.015 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:40.517 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:41.017 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:41.518 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:42.020 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:42.520 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:43.022 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:43.523 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:44.024 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:44.526 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:45.027 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:45.527 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:46.028 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:46.530 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:47.030 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:47.531 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:48.033 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:48.535 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:49.035 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:49.537 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:50.038 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:50.539 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:51.040 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:51.541 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:52.043 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:52.543 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:53.043 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:53.545 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:54.045 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:54.547 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:55.047 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:55.549 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:56.049 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:56.550 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:57.051 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:57.552 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:58.053 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:58.555 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:59.055 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:19:59.556 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:00.057 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:00.557 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:01.057 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:01.559 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:02.060 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:02.560 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:03.062 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:03.562 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:04.063 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:04.564 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:05.065 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:05.565 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:06.068 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:06.568 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:07.068 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:07.570 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:08.070 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:08.571 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:09.072 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:09.574 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:10.074 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:10.575 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:11.076 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:11.577 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:12.077 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:12.578 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:13.078 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:13.579 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:14.081 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:14.581 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:15.083 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:15.584 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:16.085 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:16.586 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:17.088 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:17.589 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:18.090 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:18.591 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:19.093 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:19.594 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:20.094 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:20.596 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:21.096 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:21.598 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:22.099 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:22.599 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:23.101 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:23.602 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:24.103 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:24.604 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:25.105 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:25.606 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:26.107 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:26.607 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:27.107 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:27.608 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:28.109 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:28.609 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:29.110 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:29.612 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:30.113 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:30.614 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:31.116 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:31.616 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:32.117 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:32.618 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:33.119 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:33.621 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:34.122 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:34.623 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:35.125 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:35.626 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:36.125 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:36.627 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:37.128 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:37.628 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:38.130 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:38.631 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:39.132 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:39.632 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:40.133 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:40.633 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:41.133 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:41.633 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:42.135 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:42.636 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:43.137 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:43.638 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:44.138 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:44.639 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:45.140 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:45.641 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:46.141 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:46.642 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:47.143 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:47.644 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:48.146 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:48.647 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:49.148 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:49.649 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:50.150 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:50.651 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:51.152 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:51.653 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:52.154 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:52.654 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:53.155 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:53.656 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:54.157 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:54.658 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:55.159 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:55.660 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:56.162 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:56.662 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:57.163 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:57.664 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:58.167 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:58.666 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:59.168 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:20:59.668 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:00.171 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:00.672 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:01.173 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:01.675 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:02.175 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:02.676 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:03.177 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:03.678 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:04.179 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:04.680 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:05.180 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:05.680 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:06.181 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:06.682 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:07.183 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:07.685 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:08.187 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:08.688 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:09.189 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:09.693 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:10.192 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:10.694 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:11.193 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:11.693 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:12.194 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:12.694 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:13.195 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:13.696 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:14.197 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:14.698 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:15.199 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:15.701 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:16.202 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:16.703 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:17.204 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:17.705 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:18.206 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:18.707 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:19.208 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:19.709 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:20.210 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:20.713 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:21.213 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:21.714 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:22.216 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:22.717 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:23.218 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:23.720 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:24.220 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:24.721 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:25.222 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:25.725 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:26.226 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:26.725 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:27.225 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:27.727 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:28.227 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:28.729 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:29.232 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:29.730 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:30.231 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:30.733 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:31.233 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:31.734 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:32.235 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:32.736 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:33.237 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:33.737 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:34.239 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:34.740 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:35.240 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:35.742 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:36.242 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:36.743 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:37.245 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:37.745 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:38.245 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:38.746 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:39.247 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:39.748 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:40.250 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:40.751 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:41.251 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:41.752 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:42.253 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:42.754 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:43.255 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:43.757 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:44.259 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:44.758 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:45.259 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:45.761 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:46.262 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:46.762 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:47.264 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:47.764 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:48.265 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:48.768 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:49.268 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:49.769 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:50.269 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:50.840 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:51.327 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:51.828 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:52.329 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:52.831 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:53.331 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:53.833 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:54.334 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:54.835 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:55.336 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:55.838 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:56.338 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:56.838 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:57.338 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:57.839 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:58.340 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:58.840 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:59.342 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:21:59.843 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:00.345 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:00.845 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:01.346 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:01.848 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:02.348 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:02.849 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:03.350 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:03.852 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:04.352 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:04.854 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:05.355 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:05.855 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:06.356 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:06.857 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:07.357 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:07.859 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:08.360 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:08.860 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:09.361 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:09.862 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:10.364 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:10.864 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:11.363 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:11.865 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:12.365 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:12.866 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:13.368 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:13.870 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:14.370 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:14.871 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:15.373 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:15.873 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:16.373 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:16.873 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:17.374 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:17.874 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:18.376 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:18.877 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:19.380 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:19.881 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:20.382 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:20.883 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:21.385 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:21.887 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:22.391 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:22.890 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:23.390 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:23.891 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:24.391 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:24.892 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:25.394 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:25.894 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:26.396 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:26.897 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:27.397 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:27.899 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:28.400 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:28.900 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:29.402 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:29.903 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:30.404 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:30.904 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:31.406 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:31.907 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:32.408 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:32.909 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:33.409 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:33.910 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:34.412 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:34.912 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:35.413 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:35.914 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:36.415 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:36.916 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:37.417 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:37.917 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:38.418 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:38.919 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:39.420 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:39.923 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:40.423 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:40.924 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:41.425 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:41.926 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:42.427 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:42.928 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:43.430 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:43.931 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:44.432 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:44.933 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:45.434 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:45.934 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:46.436 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:46.936 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:47.436 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:47.939 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:48.439 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:48.940 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:49.441 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:49.942 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:50.442 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:50.855 +0530 [debug] ([34mevent.js[0m) [31mFound ["onTicketCreateHandler"] as exported functions.[0m
+2024-09-24 11:22:50.943 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:51.445 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:51.945 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:52.445 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:52.945 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:53.446 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:53.947 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:54.449 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:54.646 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d","fdkmid_101_101_freshservice":{"fdkmid_101_101_custom_iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]}}}[0m
+2024-09-24 11:22:54.646 +0530 [debug] ([34mbeevents.js[0m) [31mUsing {"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]} as iparams for testing.[0m
+2024-09-24 11:22:54.647 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d","fdkmid_101_101_freshservice":{"fdkmid_101_101_custom_iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]}}}[0m
+2024-09-24 11:22:54.647 +0530 [debug] ([34mbeevents.js[0m) [31mUsing {} as app settings for testing.[0m
+2024-09-24 11:22:54.647 +0530 [debug] ([34mbeevents.js[0m) [31mCalling event handler with {"categoryName":"productEvent","categoryArgs":{"methodName":"onTicketCreate","methodParams":{"account_id":"1","domain":"sample.freshservice.com","timestamp":1496400354326,"region":"US","event":"onTicketCreate","data":{"ticket":{"subject":"Support Needed...","description":"<div>Some details on the issue ..</div>","is_description_html_truncated":false,"description_text":"Some details on the issue ...","is_description_text_truncated":false,"due_by":"2015-07-14T13:08:06Z","fr_due_by":"2015-07-14T13:08:06Z","fr_escalated":false,"is_escalated":false,"fwd_emails":["charles@freshservice.com","diana@freshservice.com"],"reply_cc_emails":["charles@freshservice.com","diana@freshservice.com"],"email_config_id":77123,"id":1,"group_id":351,"group_name":"Service Desk","department_id":2,"department_name":"HR","requester_id":5483,"requester_name":"Rachel","responder_id":320,"responder_email":"andrea@freshservice.com","responder_name":"Andrea","status":2,"status_name":"Open","priority":1,"priority_name":"Low","urgency":1,"urgency_name":"Low","impact":1,"impact_name":"Low","type":1,"type_name":"Incident","tags":["sales","marketing"],"spam":false,"source":2,"source_name":"Portal","category":"Hardware","sub_category":"Laptop","item_category":"Mac","cc_emails":["ram@freshservice.com","diana@freshservice.com"],"created_at":"2015-07-09T13:08:06Z","updated_at":"2015-07-09T13:08:06Z","attachments":[{"name":"sample.jpg","attachment_url":"https://s3.amazonaws.com/cdn.freshservice.com/data/helpdesk/attachments/production/9019290053/original/sample.jpg"}],"problem":{"id":1223,"name":"Problem in..."},"change":{"id":13442,"name":"Change for..."},"associated_changes":[{"id":1234,"name":"Test change 1234"},{"id":5678,"name":"Test change 5678"}],"assets":[{"asset_id":1,"asset_name":"Laptop","asset_impact":"High"}],"custom_fields":[{"name":"Org code","label":"Org code","column":"ffs_04","type":"dropdown","value":"XMO_12"},{"name":"RCA","label":"RCA","column":"ffs_05","type":"dropdown","value":"fix steps were..."}],"workspace_id":2,"workspace_name":"IT"},"requester":{"id":5483,"name":"Rachel","email":"rachel@freshservice.com","mobile":7654367287,"phone":4352789885,"language":"en","created_at":"2015-03-28T09:08:16Z"},"actor":{"profile_id":27000015175}},"iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]},"app_settings":{}}}}[0m
+2024-09-24 11:22:54.648 +0530 [debug] ([34mcoverage.js[0m) [31mInstrumenting /Users/maanaeshswamy/FreshService-Middleware/fdkMiddleware/server/server.js[0m
+2024-09-24 11:22:54.949 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:55.172 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:55.459 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:55.952 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:56.453 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:56.953 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:57.454 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:57.955 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:58.456 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:58.957 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:59.458 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:22:59.958 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:00.458 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:00.959 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:01.461 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:01.962 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:02.463 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:02.964 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:03.465 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:03.966 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:04.467 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:04.968 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:05.469 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:05.970 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:06.470 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:06.971 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:07.472 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:07.973 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:08.473 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:08.973 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:09.474 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:09.975 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:10.476 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:10.977 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:11.478 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:11.979 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:12.480 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:12.981 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:13.482 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:13.982 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:14.483 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:14.984 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:15.485 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:15.986 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:16.488 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:16.989 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:17.490 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:17.991 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:18.492 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:18.994 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:19.494 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:19.995 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:20.497 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:20.998 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:21.499 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:22.000 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:22.501 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:23.002 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:23.503 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:24.004 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:24.505 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:25.006 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:25.507 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:26.008 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:26.508 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:27.009 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:27.510 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:28.011 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:28.513 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:29.013 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:29.515 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:30.016 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:30.516 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:31.018 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:31.519 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:32.019 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:32.521 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:33.023 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:33.523 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:34.023 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:34.524 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:35.024 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:35.526 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:36.028 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:36.530 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:37.030 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:37.531 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:38.032 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:38.533 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:39.034 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:39.535 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:40.036 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:40.536 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:41.038 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:41.539 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:42.040 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:42.541 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:43.043 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:43.544 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:44.045 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:44.546 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:45.047 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:45.548 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:46.049 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:46.550 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:47.052 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:47.553 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:48.054 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:48.555 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:49.055 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:49.556 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:50.057 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:50.558 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:51.059 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:51.561 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:52.062 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:52.564 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:53.064 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:53.564 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:54.064 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:54.565 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:55.067 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:55.573 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:56.074 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:56.576 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:56.587 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d","fdkmid_101_101_freshservice":{"fdkmid_101_101_custom_iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]}}}[0m
+2024-09-24 11:23:56.587 +0530 [debug] ([34mbeevents.js[0m) [31mUsing {"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]} as iparams for testing.[0m
+2024-09-24 11:23:56.587 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d","fdkmid_101_101_freshservice":{"fdkmid_101_101_custom_iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]}}}[0m
+2024-09-24 11:23:56.587 +0530 [debug] ([34mbeevents.js[0m) [31mUsing {} as app settings for testing.[0m
+2024-09-24 11:23:56.587 +0530 [debug] ([34mbeevents.js[0m) [31mCalling event handler with {"categoryName":"productEvent","categoryArgs":{"methodName":"onTicketCreate","methodParams":{"account_id":"1","domain":"sample.freshservice.com","timestamp":1496400354326,"region":"US","event":"onTicketCreate","data":{"ticket":{"subject":"Support Needed...","description":"<div>Some details on the issue ..</div>","is_description_html_truncated":false,"description_text":"Some details on the issue ...","is_description_text_truncated":false,"due_by":"2015-07-14T13:08:06Z","fr_due_by":"2015-07-14T13:08:06Z","fr_escalated":false,"is_escalated":false,"fwd_emails":["charles@freshservice.com","diana@freshservice.com"],"reply_cc_emails":["charles@freshservice.com","diana@freshservice.com"],"email_config_id":77123,"id":1,"group_id":351,"group_name":"Service Desk","department_id":2,"department_name":"HR","requester_id":5483,"requester_name":"Rachel","responder_id":320,"responder_email":"andrea@freshservice.com","responder_name":"Andrea","status":2,"status_name":"Open","priority":1,"priority_name":"Low","urgency":1,"urgency_name":"Low","impact":1,"impact_name":"Low","type":1,"type_name":"Incident","tags":["sales","marketing"],"spam":false,"source":2,"source_name":"Portal","category":"Hardware","sub_category":"Laptop","item_category":"Mac","cc_emails":["ram@freshservice.com","diana@freshservice.com"],"created_at":"2015-07-09T13:08:06Z","updated_at":"2015-07-09T13:08:06Z","attachments":[{"name":"sample.jpg","attachment_url":"https://s3.amazonaws.com/cdn.freshservice.com/data/helpdesk/attachments/production/9019290053/original/sample.jpg"}],"problem":{"id":1223,"name":"Problem in..."},"change":{"id":13442,"name":"Change for..."},"associated_changes":[{"id":1234,"name":"Test change 1234"},{"id":5678,"name":"Test change 5678"}],"assets":[{"asset_id":1,"asset_name":"Laptop","asset_impact":"High"}],"custom_fields":[{"name":"Org code","label":"Org code","column":"ffs_04","type":"dropdown","value":"XMO_12"},{"name":"RCA","label":"RCA","column":"ffs_05","type":"dropdown","value":"fix steps were..."}],"workspace_id":2,"workspace_name":"IT"},"requester":{"id":5483,"name":"Rachel","email":"rachel@freshservice.com","mobile":7654367287,"phone":4352789885,"language":"en","created_at":"2015-03-28T09:08:16Z"},"actor":{"profile_id":27000015175}},"iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]},"app_settings":{}}}}[0m
+2024-09-24 11:23:56.588 +0530 [debug] ([34mcoverage.js[0m) [31mInstrumenting /Users/maanaeshswamy/FreshService-Middleware/fdkMiddleware/server/server.js[0m
+2024-09-24 11:23:57.077 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:57.106 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:57.579 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:58.085 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:58.581 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:59.082 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:23:59.584 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:00.085 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:00.585 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:01.087 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:01.589 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:02.090 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:02.591 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:03.091 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:03.592 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:04.093 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:04.594 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:05.095 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:05.595 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:06.097 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:06.597 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:07.098 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:07.599 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:08.101 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:08.602 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:09.103 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:09.604 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:10.104 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:10.604 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:11.106 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:11.606 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:12.107 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:12.608 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:13.110 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:13.610 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:14.111 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:14.612 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:15.113 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:15.614 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:16.116 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:16.616 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:17.117 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:17.618 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:18.117 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:18.619 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:19.120 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:19.620 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:20.121 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:20.622 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:21.122 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:21.623 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:22.124 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:22.626 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:23.127 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:23.628 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:24.130 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:24.631 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:25.132 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:25.633 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:26.134 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:26.634 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:27.136 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:27.636 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:28.137 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:28.642 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:29.139 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:29.640 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:30.141 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:30.642 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:31.144 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:31.644 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:32.146 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:32.646 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:33.146 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:33.646 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:34.148 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:34.648 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:35.149 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:35.650 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:36.150 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:36.652 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:37.152 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:37.654 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:38.154 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:38.656 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:39.157 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:39.658 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:40.159 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:40.659 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:41.161 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:41.661 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:42.162 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:42.662 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:43.162 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:43.664 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:44.164 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:44.666 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:45.165 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:45.666 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:46.168 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:46.668 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:47.170 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:47.669 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:48.170 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:48.672 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:49.173 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:49.673 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:50.175 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:50.676 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:51.176 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:51.678 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:52.178 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:52.679 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:53.180 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:53.681 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:54.183 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:54.684 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:55.185 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:55.685 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:56.184 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:56.688 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:57.188 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:57.689 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:58.191 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:58.691 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:59.192 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:24:59.694 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:00.196 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:00.697 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:01.198 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:01.699 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:02.200 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:02.700 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:03.201 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:03.701 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:04.203 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:04.703 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:05.204 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:05.706 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:06.206 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:06.707 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:07.207 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:07.709 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:08.209 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:08.710 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:09.209 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:09.710 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:10.213 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:10.713 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:11.215 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:11.715 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:12.216 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:12.718 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:13.218 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:13.720 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:14.221 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:14.721 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:15.222 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:15.724 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:16.224 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:16.726 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:17.227 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:17.728 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:18.230 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:18.731 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:19.232 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:19.733 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:20.233 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:20.735 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:21.235 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:21.734 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:22.235 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:22.737 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:23.238 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:23.740 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:24.240 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:24.741 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:25.243 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:25.743 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:26.245 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:26.745 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:27.246 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:27.747 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:28.247 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:28.749 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:29.250 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:29.751 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:30.252 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:30.752 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:31.253 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:31.753 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:32.254 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:32.756 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:33.257 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:33.758 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:34.257 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:34.759 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:35.259 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:35.761 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:36.262 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:36.763 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:37.264 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:37.764 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:38.267 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:38.767 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:39.268 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:39.769 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:40.270 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:40.770 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:41.274 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:41.772 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:42.274 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:42.775 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:43.276 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:43.776 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:44.276 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:44.777 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:45.279 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:45.780 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:46.280 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:46.781 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:47.283 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:47.785 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:48.286 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:48.787 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:49.287 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:49.788 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:50.290 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:50.791 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:51.291 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:51.791 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:52.295 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:52.795 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:53.295 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:53.797 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:54.297 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:54.798 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:55.300 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:55.800 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:56.299 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:56.803 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:57.306 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:57.810 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:58.310 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:58.812 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:59.312 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:25:59.814 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:00.315 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:00.815 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:01.317 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:01.818 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:02.318 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:02.820 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:03.320 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:03.822 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:04.323 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:04.824 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:05.325 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:05.826 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:06.326 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:06.827 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:07.328 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:07.828 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:08.329 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:08.830 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:09.331 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:09.832 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:10.333 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:10.834 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:26:11.335 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:28:23.845 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d","fdkmid_101_101_freshservice":{"fdkmid_101_101_custom_iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]}}}[0m
+2024-09-24 11:28:23.846 +0530 [debug] ([34mbeevents.js[0m) [31mUsing {"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]} as iparams for testing.[0m
+2024-09-24 11:28:23.846 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d","fdkmid_101_101_freshservice":{"fdkmid_101_101_custom_iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]}}}[0m
+2024-09-24 11:28:23.846 +0530 [debug] ([34mbeevents.js[0m) [31mUsing {} as app settings for testing.[0m
+2024-09-24 11:28:23.847 +0530 [debug] ([34mbeevents.js[0m) [31mCalling event handler with {"categoryName":"productEvent","categoryArgs":{"methodName":"onTicketCreate","methodParams":{"account_id":"1","domain":"sample.freshservice.com","timestamp":1496400354326,"region":"US","event":"onTicketCreate","data":{"ticket":{"subject":"Support Needed...","description":"<div>Some details on the issue ..</div>","is_description_html_truncated":false,"description_text":"Some details on the issue ...","is_description_text_truncated":false,"due_by":"2015-07-14T13:08:06Z","fr_due_by":"2015-07-14T13:08:06Z","fr_escalated":false,"is_escalated":false,"fwd_emails":["charles@freshservice.com","diana@freshservice.com"],"reply_cc_emails":["charles@freshservice.com","diana@freshservice.com"],"email_config_id":77123,"id":1,"group_id":351,"group_name":"Service Desk","department_id":2,"department_name":"HR","requester_id":5483,"requester_name":"Rachel","responder_id":320,"responder_email":"andrea@freshservice.com","responder_name":"Andrea","status":2,"status_name":"Open","priority":1,"priority_name":"Low","urgency":1,"urgency_name":"Low","impact":1,"impact_name":"Low","type":1,"type_name":"Incident","tags":["sales","marketing"],"spam":false,"source":2,"source_name":"Portal","category":"Hardware","sub_category":"Laptop","item_category":"Mac","cc_emails":["ram@freshservice.com","diana@freshservice.com"],"created_at":"2015-07-09T13:08:06Z","updated_at":"2015-07-09T13:08:06Z","attachments":[{"name":"sample.jpg","attachment_url":"https://s3.amazonaws.com/cdn.freshservice.com/data/helpdesk/attachments/production/9019290053/original/sample.jpg"}],"problem":{"id":1223,"name":"Problem in..."},"change":{"id":13442,"name":"Change for..."},"associated_changes":[{"id":1234,"name":"Test change 1234"},{"id":5678,"name":"Test change 5678"}],"assets":[{"asset_id":1,"asset_name":"Laptop","asset_impact":"High"}],"custom_fields":[{"name":"Org code","label":"Org code","column":"ffs_04","type":"dropdown","value":"XMO_12"},{"name":"RCA","label":"RCA","column":"ffs_05","type":"dropdown","value":"fix steps were..."}],"workspace_id":2,"workspace_name":"IT"},"requester":{"id":5483,"name":"Rachel","email":"rachel@freshservice.com","mobile":7654367287,"phone":4352789885,"language":"en","created_at":"2015-03-28T09:08:16Z"},"actor":{"profile_id":27000015175}},"iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]},"app_settings":{}}}}[0m
+2024-09-24 11:28:23.848 +0530 [debug] ([34mcoverage.js[0m) [31mInstrumenting /Users/maanaeshswamy/FreshService-Middleware/fdkMiddleware/server/server.js[0m
+2024-09-24 11:28:24.372 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:39:13.741 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d","fdkmid_101_101_freshservice":{"fdkmid_101_101_custom_iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]}}}[0m
+2024-09-24 11:39:13.741 +0530 [debug] ([34mbeevents.js[0m) [31mUsing {"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]} as iparams for testing.[0m
+2024-09-24 11:39:13.741 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d","fdkmid_101_101_freshservice":{"fdkmid_101_101_custom_iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]}}}[0m
+2024-09-24 11:39:13.741 +0530 [debug] ([34mbeevents.js[0m) [31mUsing {} as app settings for testing.[0m
+2024-09-24 11:39:13.741 +0530 [debug] ([34mbeevents.js[0m) [31mCalling event handler with {"categoryName":"productEvent","categoryArgs":{"methodName":"onTicketCreate","methodParams":{"account_id":"1","domain":"sample.freshservice.com","timestamp":1496400354326,"region":"US","event":"onTicketCreate","data":{"ticket":{"subject":"Support Needed...","description":"<div>Some details on the issue ..</div>","is_description_html_truncated":false,"description_text":"Some details on the issue ...","is_description_text_truncated":false,"due_by":"2015-07-14T13:08:06Z","fr_due_by":"2015-07-14T13:08:06Z","fr_escalated":false,"is_escalated":false,"fwd_emails":["charles@freshservice.com","diana@freshservice.com"],"reply_cc_emails":["charles@freshservice.com","diana@freshservice.com"],"email_config_id":77123,"id":1,"group_id":351,"group_name":"Service Desk","department_id":2,"department_name":"HR","requester_id":5483,"requester_name":"Rachel","responder_id":320,"responder_email":"andrea@freshservice.com","responder_name":"Andrea","status":2,"status_name":"Open","priority":1,"priority_name":"Low","urgency":1,"urgency_name":"Low","impact":1,"impact_name":"Low","type":1,"type_name":"Incident","tags":["sales","marketing"],"spam":false,"source":2,"source_name":"Portal","category":"Hardware","sub_category":"Laptop","item_category":"Mac","cc_emails":["ram@freshservice.com","diana@freshservice.com"],"created_at":"2015-07-09T13:08:06Z","updated_at":"2015-07-09T13:08:06Z","attachments":[{"name":"sample.jpg","attachment_url":"https://s3.amazonaws.com/cdn.freshservice.com/data/helpdesk/attachments/production/9019290053/original/sample.jpg"}],"problem":{"id":1223,"name":"Problem in..."},"change":{"id":13442,"name":"Change for..."},"associated_changes":[{"id":1234,"name":"Test change 1234"},{"id":5678,"name":"Test change 5678"}],"assets":[{"asset_id":1,"asset_name":"Laptop","asset_impact":"High"}],"custom_fields":[{"name":"Org code","label":"Org code","column":"ffs_04","type":"dropdown","value":"XMO_12"},{"name":"RCA","label":"RCA","column":"ffs_05","type":"dropdown","value":"fix steps were..."}],"workspace_id":2,"workspace_name":"IT"},"requester":{"id":5483,"name":"Rachel","email":"rachel@freshservice.com","mobile":7654367287,"phone":4352789885,"language":"en","created_at":"2015-03-28T09:08:16Z"},"actor":{"profile_id":27000015175}},"iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]},"app_settings":{}}}}[0m
+2024-09-24 11:39:13.744 +0530 [debug] ([34mcoverage.js[0m) [31mInstrumenting /Users/maanaeshswamy/FreshService-Middleware/fdkMiddleware/server/server.js[0m
+2024-09-24 11:39:14.265 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
+2024-09-24 11:48:14.501 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d","fdkmid_101_101_freshservice":{"fdkmid_101_101_custom_iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]}}}[0m
+2024-09-24 11:48:14.501 +0530 [debug] ([34mbeevents.js[0m) [31mUsing {"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]} as iparams for testing.[0m
+2024-09-24 11:48:14.501 +0530 [debug] ([34mdata.js[0m) [31mRead {"report_hash":"fa33ec54f6d36794becce1a7a0a9584cc8d7554d7d0121a6fba61f45f384bc8d","fdkmid_101_101_freshservice":{"fdkmid_101_101_custom_iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]}}}[0m
+2024-09-24 11:48:14.501 +0530 [debug] ([34mbeevents.js[0m) [31mUsing {} as app settings for testing.[0m
+2024-09-24 11:48:14.502 +0530 [debug] ([34mbeevents.js[0m) [31mCalling event handler with {"categoryName":"productEvent","categoryArgs":{"methodName":"onTicketCreate","methodParams":{"account_id":"1","domain":"sample.freshservice.com","timestamp":1496400354326,"region":"US","event":"onTicketCreate","data":{"ticket":{"subject":"Support Needed...","description":"<div>Some details on the issue ..</div>","is_description_html_truncated":false,"description_text":"Some details on the issue ...","is_description_text_truncated":false,"due_by":"2015-07-14T13:08:06Z","fr_due_by":"2015-07-14T13:08:06Z","fr_escalated":false,"is_escalated":false,"fwd_emails":["charles@freshservice.com","diana@freshservice.com"],"reply_cc_emails":["charles@freshservice.com","diana@freshservice.com"],"email_config_id":77123,"id":1,"group_id":351,"group_name":"Service Desk","department_id":2,"department_name":"HR","requester_id":5483,"requester_name":"Rachel","responder_id":320,"responder_email":"andrea@freshservice.com","responder_name":"Andrea","status":2,"status_name":"Open","priority":1,"priority_name":"Low","urgency":1,"urgency_name":"Low","impact":1,"impact_name":"Low","type":1,"type_name":"Incident","tags":["sales","marketing"],"spam":false,"source":2,"source_name":"Portal","category":"Hardware","sub_category":"Laptop","item_category":"Mac","cc_emails":["ram@freshservice.com","diana@freshservice.com"],"created_at":"2015-07-09T13:08:06Z","updated_at":"2015-07-09T13:08:06Z","attachments":[{"name":"sample.jpg","attachment_url":"https://s3.amazonaws.com/cdn.freshservice.com/data/helpdesk/attachments/production/9019290053/original/sample.jpg"}],"problem":{"id":1223,"name":"Problem in..."},"change":{"id":13442,"name":"Change for..."},"associated_changes":[{"id":1234,"name":"Test change 1234"},{"id":5678,"name":"Test change 5678"}],"assets":[{"asset_id":1,"asset_name":"Laptop","asset_impact":"High"}],"custom_fields":[{"name":"Org code","label":"Org code","column":"ffs_04","type":"dropdown","value":"XMO_12"},{"name":"RCA","label":"RCA","column":"ffs_05","type":"dropdown","value":"fix steps were..."}],"workspace_id":2,"workspace_name":"IT"},"requester":{"id":5483,"name":"Rachel","email":"rachel@freshservice.com","mobile":7654367287,"phone":4352789885,"language":"en","created_at":"2015-03-28T09:08:16Z"},"actor":{"profile_id":27000015175}},"iparams":{"url":"https://effy-opinyin.freshdesk.com","key":"GNqXIlHkv2vmPWhxg6zE","selectedFields":[{"id":60000418216,"name":"Subject"},{"id":60000418219,"name":"Status"},{"id":60000418220,"name":"Priority"},{"id":60000418224,"name":"Description"}]},"app_settings":{}}}}[0m
+2024-09-24 11:48:14.502 +0530 [debug] ([34mcoverage.js[0m) [31mInstrumenting /Users/maanaeshswamy/FreshService-Middleware/fdkMiddleware/server/server.js[0m
+2024-09-24 11:48:15.020 +0530 [debug] ([34mcoverage.js[0m) [31mWriting coverage.[0m
