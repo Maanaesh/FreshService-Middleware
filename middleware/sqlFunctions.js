@@ -1,8 +1,16 @@
 export function createTableSQL(tableName, fields) {
-    const columns = fields.map(field => `${field} VARCHAR(255)`).join(', ');
+    const columns = fields.map(field => {
+        // Check if the field is either 'status' or 'priority'
+        if (field.toLowerCase() === 'status' || field.toLowerCase() === 'priority') {
+            return `${field} INT`; // Use INTEGER for status and priority
+        }
+        return `${field} VARCHAR(255)`; // Default to VARCHAR(255) for other fields
+    }).join(', ');
+
     const createTableSQL = `CREATE TABLE ${tableName} (${columns});`;
     return createTableSQL;
-  }
+}
+
 
   export const insertTicket = (ticket) => {
     // Get the keys and values from the ticket object
@@ -21,7 +29,7 @@ export function createTableSQL(tableName, fields) {
     // Construct the final INSERT SQL statement
     return `INSERT INTO Tickets (${fieldsString}) VALUES (${valuesString});`;
   };
-  
+
 export const checkColumnExists = async (conn, tableName, columnName) => {
     const sql = `
       SELECT COUNT(*) as count 
@@ -30,4 +38,9 @@ export const checkColumnExists = async (conn, tableName, columnName) => {
     `;
     const [rows] = await conn.query(sql, [tableName, columnName]);
     return rows[0].count > 0;
+  };
+
+  export const updatePushedToFreshdesk = async (email,conn) => {
+    const sql = `UPDATE Tickets SET pushed_to_freshdesk = 1 WHERE Email = ?`;
+    await conn.query(sql, [email]);
   };

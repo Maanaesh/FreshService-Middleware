@@ -18,42 +18,32 @@ const initializeApp = async () => {
 
   app.post("/api/createTickets", async (req, res) => {
     const ticket = req.body.FS_fields;
-  
-    ticket.pushed_to_freshdesk = 0;
-    console.log(ticket);
-  
-    try {
-      const emailExists = await checkColumnExists(conn, 'Tickets', 'Email');
-      const pushedExists = await checkColumnExists(conn, 'Tickets', 'pushed_to_freshdesk');
-  
-      let sql = '';
-  
-      if (!emailExists) {
-        sql += "ALTER TABLE Tickets ADD Email VARCHAR(255); ";
-      }
-      
-      if (!pushedExists) {
-        sql += "ALTER TABLE Tickets ADD pushed_to_freshdesk BIT DEFAULT 0; ";
-      }
-  
-      if (sql) {
-        await conn.query(sql);
-      }
-  
-      sql = insertTicket(ticket); 
-      await conn.query(sql);
-  
-      res.status(200).json({ message: 'Ticket stored successfully' });
-    } catch (error) {
-      console.error('Error handling ticket creation:', error);
-      res.status(500).json({ message: 'Failed to save ticket' });
-    }
-  });
-  
 
-  app.get("/", async (req, res) => {
-    return res.status(200).json({ message: "hello!" });
-  });
+    ticket.pushed_to_freshdesk = 0; // Set default value
+    console.log(ticket);
+
+    try {
+        // Check if the columns already exist
+        const emailExists = await checkColumnExists(conn, 'Tickets', 'Email');
+        const pushedExists = await checkColumnExists(conn, 'Tickets', 'pushed_to_freshdesk');
+        if (!emailExists) {
+            await conn.query("ALTER TABLE Tickets ADD Email VARCHAR(255);");
+        }
+
+        if (!pushedExists) {
+            await conn.query("ALTER TABLE Tickets ADD pushed_to_freshdesk BIT DEFAULT 0;");
+        }
+
+
+        const sql = insertTicket(ticket);
+        await conn.query(sql);
+
+        res.status(200).json({ message: 'Ticket stored successfully' });
+    } catch (error) {
+        console.error('Error handling ticket creation:', error);
+        res.status(500).json({ message: 'Failed to save ticket' });
+    }
+});
 
   app.post("/api/storeFieldMap", async (req, res) => {
     try {
@@ -67,8 +57,20 @@ const initializeApp = async () => {
       console.log("Map received:", map);
       console.log("FD_fields received:", FD_fields);
 
-    
-      const sql = createTableSQL("Tickets", FD_fields);
+      const tableName = "Tickets";
+        
+      const tableExistsQuery = `SHOW TABLES LIKE '${tableName}'`;
+      const tableExistsResult = await conn.query(tableExistsQuery);
+        
+      if (tableExistsResult.length > 0) {
+            const newTableName = `${tableName}_backup_${Date.now()}`;
+            await conn.query(`CREATE TABLE ${newTableName} LIKE ${tableName}`);
+            console.log(`Backup of table ${tableName} created as ${newTableName}`);
+            
+            await conn.query(`DROP TABLE ${tableName}`);
+            console.log(`Dropped table ${tableName}`);
+        }
+      const sql = createTableSQL(tableName, FD_fields);
       console.log(sql);
 
       await conn.query(sql);
@@ -82,7 +84,7 @@ const initializeApp = async () => {
 
   app.listen(port, () => {
     console.log(`Middleware listening on port ${port}`);
-    // Optionally handle FRESHDESK_KEY and FRESHDESK_URL
+    handler(FRESHDESK_KEY,FRESHDESK_URL,conn);
   });
 };
 

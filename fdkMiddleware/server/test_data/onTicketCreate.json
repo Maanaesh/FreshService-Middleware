@@ -6,8 +6,8 @@
   "event": "onTicketCreate",
   "data": {
     "ticket": {
-      "subject": "Hello",
-      "description": "<div>test tkt</div>",
+      "subject": "Test Tkt",
+      "description": "<div>this is a test</div>",
       "is_description_html_truncated": false,
       "description_text": "Some details on the issue ...",
       "is_description_text_truncated": false,
@@ -36,7 +36,7 @@
       "responder_name": "Andrea",
       "status": 2,
       "status_name": "Open",
-      "priority": 1,
+      "priority": 3,
       "priority_name": "Low",
       "urgency": 1,
       "urgency_name": "Low",
@@ -112,8 +112,8 @@
     },
     "requester": {
       "id": 5483,
-      "name": "John",
-      "email": "john@freshservice.com",
+      "name": "Joe",
+      "email": "joe@freshservice.com",
       "mobile": 7654367287,
       "phone": 4352789885,
       "language": "en",
