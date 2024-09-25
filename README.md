@@ -1,3 +1,99 @@
+
+# FreshService Middleware
+
+A Middleware application that stores FreshService tickets and Creates a replica of the same in FreshDesk
+
+
+
+
+## API Reference
+
+#### Get FreshService URL 🔗 & KEY 🔑
+
+```http
+  GET /api/FreshService/
+```
+
+#### Create Ticket 🎟️
+
+```http
+  POST /api/Tickets/createTickets
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `FS_fields`      | `JSON` | **Required**. FreshServiceTicket data |
+
+#### Create Table 
+
+```http
+  POST /api/Tickets/storeFieldMap
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `map`      | `JSON` | **Required**. FreshDesk and FreshService ticket map |
+| `FD_Fields`      | `JSON` | **Required**. FreshDesk Field names |
+
+
+
+
+
+
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file.
+also check out the `sample.env` file
+
+`PORT`
+
+`FRESHDESK_API`
+
+
+`DB_PASSWORD`
+
+`DB_NAME`
+
+`FRESHDESK_URL`
+
+`FS_URL`
+
+`FS_API`
+
+## Run the middleware Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Maanaesh/FreshService-Middleware.git
+```
+
+Go to the project directory
+
+```bash
+  cd FreshService-Middleware
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+server should return something like this 
+```bash
+MySQL pool created
+Database connected successfully
+Middleware listening on port 5001
+```
+
 ## Events
 #### `onAppInstall` Event
 
@@ -59,3 +155,7 @@ following actions:
     - If these columns do not exist:
         - The Tickets table is altered to include the `email` and `pushed_to_freshdesk` columns.
     - The ticket is then stored in the `Tickets` table.
+## Documentation
+
+[Documentation](https://linktodocumentation)
+
