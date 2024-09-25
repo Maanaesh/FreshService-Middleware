@@ -1,7 +1,7 @@
 import axios from "axios";
 import cron from "node-cron";
-import { updatePushedToFreshdesk } from "./controller/sqlController.js";
-import { getConnection } from "./config/db.js";
+import { updatePushedToFreshdesk } from "./sqlController.js";
+import { getConnection } from "../config/db.js";
 
 export default async function handler(key, url) {
   const conn = await getConnection();
