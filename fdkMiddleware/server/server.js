@@ -6,7 +6,7 @@ exports = {
     try {
       const map = args.iparams.fieldmap;
       const FD_fields = Object.values(map);
-      const response = await axios.post(`http://localhost:3000/api/storeFieldMap`, {
+      const response = await axios.post(`http://localhost:5001/api/tickets/storeFieldMap`, {
         map,
         FD_fields
       });
@@ -43,7 +43,7 @@ exports = {
     jsonObj["email"] = args.data.requester.email;
 
     try {
-      const response = await axios.post(`http://localhost:3000/api/createTickets/`, {
+      const response = await axios.post(`http://localhost:5001/api/tickets/createTickets/`, {
         FS_fields: jsonObj 
       });
       console.log('Success:', response.status, response?.data);

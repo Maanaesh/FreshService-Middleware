@@ -48,6 +48,13 @@
 <script src="{{{appclient}}}"></script>
 <script type="text/javascript">
 // DropDown to select Mappings
+let FS_URL='';
+let FS_KEY='';
+async function FSconfig(){
+  res= await axios.get("http://localhost:5001/api/FreshService/");
+  FS_KEY=res.data.key;
+  FS_URL=res.data.url;
+}
 let mappedFields={};
 document.getElementById('mapFieldsBtn').addEventListener('click',async function () {
   const FreshServiceDropDown = document.getElementById('FreshServiceDropDown');
@@ -84,8 +91,8 @@ console.log(FreshServiceDropDown,FreshDeskDropDown);
             const FD_fieldData = await FD_getTicketFields(url, key);
               console.log("FreshDesk Field Data:", FD_fieldData);
               populateFieldList(FD_fieldData,"fd");
-
-            const FS_fieldData=await FS_getTicketFields("https://effy.freshservice.com","oHm1hbJZdgl2_uxSV5nL");
+              await FSconfig();
+            const FS_fieldData=await FS_getTicketFields(FS_URL,FS_KEY);
             console.log("FreshService Field Data:", FS_fieldData);
             populateFieldList(FS_fieldData,"fs");
         } catch (error) {
