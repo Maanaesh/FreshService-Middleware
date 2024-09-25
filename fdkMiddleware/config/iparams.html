@@ -50,6 +50,8 @@
 // DropDown to select Mappings
 let FS_URL='';
 let FS_KEY='';
+let FD_selected=[];
+let FS_Selected=[];
 async function FSconfig(){
   res= await axios.get("http://localhost:5001/api/FreshService/");
   FS_KEY=res.data.key;
@@ -57,12 +59,14 @@ async function FSconfig(){
 }
 let mappedFields={};
 document.getElementById('mapFieldsBtn').addEventListener('click',async function () {
-  const FreshServiceDropDown = document.getElementById('FreshServiceDropDown');
-  const FreshDeskDropDown = document.getElementById('FreshDeskDropDown');
+const FreshServiceDropDown = document.getElementById('FreshServiceDropDown');
+const FreshDeskDropDown = document.getElementById('FreshDeskDropDown');
 
   const FS_SelectedFields = await FreshServiceDropDown.getSelectedItem();
   const FD_SelectedFields = await FreshDeskDropDown.getSelectedItem();
-console.log(FreshServiceDropDown,FreshDeskDropDown);
+  FS_Selected=FS_SelectedFields;
+  FD_selected=FD_SelectedFields;
+  // console.log(FS_Selected,FD_Selected);
   if (FS_SelectedFields.length !== FD_SelectedFields.length) {
     alert('Please select an equal number of fields on both sides.');
     return;
@@ -159,14 +163,13 @@ console.log(FreshServiceDropDown,FreshDeskDropDown);
 
   function getConfigs(configs){
     // console.log(configs['selectedFields']);
+    console.log(configs);
     document.getElementById('url').value=configs['url'];
     document.getElementById('api-key').value=configs['key'];
     document.getElementById('fetchFieldsBtn').click();
     
-    console.log(Object.keys(configs['fieldmap']));
-    document.getElementById('FreshServiceDropDown').setSelectedValues(Object.keys(configs['fieldmap']));
-    console.log(Object.values(configs['fieldmap']));
-    document.getElementById('FreshDeskDropDown').setSelectedValues(Object.values(configs['fieldmap']));  
+    document.getElementById('FreshServiceDropDown').setSelectedOptions(configs['FS_Selected']);
+    document.getElementById('FreshDeskDropDown').setSelectedOptions(configs['FD_selected']);  
   }
    
     
@@ -187,6 +190,7 @@ console.log(FreshServiceDropDown,FreshDeskDropDown);
   function postConfigs() {
     const url = document.getElementById('url').value;
     const key = document.getElementById('api-key').value;
+    
     if (!validate(url, key)) {
         return; 
     }
@@ -195,6 +199,9 @@ console.log(FreshServiceDropDown,FreshDeskDropDown);
       url,
       key,
       fieldmap: mappedFields, 
+      FD_selected,
+      FS_Selected,
+
     };
   }
 
