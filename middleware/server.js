@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import { connectDB } from './config/db.js';
 import ticketRoutes from './routes/ticketRoutes.js';
 import freshServiceRoutes from './routes/freshServiceRoutes.js'
-import handler from './handler.js';
+import handler from './controller/handler.js';
 import cors from 'cors';
 dotenv.config();
 
