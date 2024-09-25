@@ -167,7 +167,8 @@ following actions:
 3. **Handling SQL Data Types**:
    - SQL server currently assumes all ticket fields as strings, except for the `status` and `priority` fields. However, Freshdesk ticket fields might have different data types (e.g., dates, numbers, booleans). The implementation should be improved by fetching and dynamically applying the correct field types when processing ticket data from SQL to ensure consistency with Freshdesk’s ticket schema.
 
-## Documentation
+## Screenshot
+- #### installation page 
+  <img width="1144" alt="image" src="https://github.com/user-attachments/assets/77dee50c-95af-420a-a583-8b259e157284">
 
-[Documentation](https://linktodocumentation)
 
