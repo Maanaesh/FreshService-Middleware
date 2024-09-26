@@ -155,6 +155,61 @@ following actions:
     - If these columns do not exist:
         - The Tickets table is altered to include the `email` and `pushed_to_freshdesk` columns.
     - The ticket is then stored in the `Tickets` table.
+ 
+ # `handler.js` - Scheduled Ticket Pusher to Freshdesk
+
+The `handler.js` file is responsible for automating the process of pushing unsynchronized tickets from the local SQL database to Freshdesk using their API. It is designed to run periodically using the `cron` module, ensuring that any new or unsynced tickets are submitted to Freshdesk.
+
+## Key Features
+
+1. **Cron Scheduling**:
+   - The system runs a scheduled task every 30 seconds (`*/30 * * * * *`) to check for tickets in the local database that haven't been pushed to Freshdesk yet.
+   - The scheduling is done using the `node-cron` library.
+
+2. **Fetching Tickets**:
+   - It connects to the SQL database using a `getConnection()` method and queries the `Tickets` table to fetch all tickets where the `pushed_to_freshdesk` field is set to `0`.
+   - This ensures only the tickets that haven't been synchronized with Freshdesk are picked.
+
+3. **Formatting Tickets**:
+   - The ticket data from the SQL database is formatted to match Freshdesk's API requirements by converting field names to lowercase (except for the `pushed_to_freshdesk` field, which is omitted from the request).
+   - This ensures the ticket data is properly structured for submission.
+
+4. **Pushing Tickets to Freshdesk**:
+   - For each ticket, a POST request is made to Freshdesk's API (`/api/v2/tickets`) using `axios`, including the API key in the headers for authentication.
+   - If the ticket is successfully created (HTTP status `201`), the system marks the ticket as pushed in the local database by updating the `pushed_to_freshdesk` field to `1`.
+
+5. **Error Handling**:
+   - The system catches and logs any errors that occur during the ticket submission process. This ensures that failures are tracked and can be debugged easily.
+
+## Function Breakdown
+
+### `handler(key, url)`
+
+- **Parameters**:
+  - `key`: Your Freshdesk API key, used for authenticating API requests.
+  - `url`: The base URL for your Freshdesk instance, e.g., `https://yourcompany.freshdesk.com`.
+  
+- **Description**:
+  - This function starts a cron job that runs every 30 seconds.
+  - It fetches tickets that haven't been pushed to Freshdesk, formats them, and pushes them using the Freshdesk API.
+
+### Example Flow
+
+1. Fetch unsynced tickets from the local database.
+2. For each ticket:
+   - Convert field names to lowercase and exclude the `pushed_to_freshdesk` field.
+   - Push the ticket to Freshdesk using an HTTP POST request.
+   - On success, mark the ticket as pushed in the local database by updating `pushed_to_freshdesk` to `1`.
+
+### Dependencies
+
+- **axios**: For making HTTP requests to the Freshdesk API.
+- **node-cron**: For scheduling periodic tasks (to check and push tickets).
+- **SQL Connection**: This uses the `getConnection()` method from the `db.js` file to interact with the SQL database.
+
+---
+
+ 
 
 ## Scope of Improvements
 
