@@ -5,9 +5,7 @@
   <script type="module" src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.js"></script>
   <style>
-    #complexSelect {
-  display: none; /* Hide the dropdown initially */
-}
+   
 
   </style>
 </head>
@@ -20,9 +18,9 @@
     <input type='text'  placeholder='' id="middleware-url" />
     
     <fw-button id="fetchFieldsBtn" loading="false">Validate Details</fw-button>
-    <label for="FreshServiceDropDown">Freshservice Fields</label>
+    <label for="FreshserviceDropDown">Freshservice Fields</label>
     <fw-select
-          id="FreshServiceDropDown"
+          id="FreshserviceDropDown"
           placeholder="Your choices"
           hint-text="Select multiple options"
           multiple="true",
@@ -30,9 +28,9 @@
           option-value-path="id"
         >
     </fw-select>
-    <label for="FreshDeskDropDown">FreshDesk Fields</label>
+    <label for="FreshdeskDropDown">Freshdesk Fields</label>
     <fw-select
-          id="FreshDeskDropDown"
+          id="FreshdeskDropDown"
           placeholder="Your choices"
           hint-text="Select multiple options"
           multiple="true",
@@ -55,17 +53,17 @@ let FS_KEY='';
 let FD_selected=[];
 let FS_Selected=[];
 async function FSconfig(){
-  res= await axios.get("http://localhost:5001/api/FreshService/");
+  res= await axios.get(`${document.getElementById('middleware-url').value}/api/freshservice/`);
   FS_KEY=res.data.key;
   FS_URL=res.data.url;
 }
 let mappedFields={};
 document.getElementById('mapFieldsBtn').addEventListener('click',async function () {
-const FreshServiceDropDown = document.getElementById('FreshServiceDropDown');
-const FreshDeskDropDown = document.getElementById('FreshDeskDropDown');
+const FreshserviceDropDown = document.getElementById('FreshserviceDropDown');
+const FreshdeskDropDown = document.getElementById('FreshdeskDropDown');
 
-  const FS_SelectedFields = await FreshServiceDropDown.getSelectedItem();
-  const FD_SelectedFields = await FreshDeskDropDown.getSelectedItem();
+  const FS_SelectedFields = await FreshserviceDropDown.getSelectedItem();
+  const FD_SelectedFields = await FreshdeskDropDown.getSelectedItem();
   FS_Selected=FS_SelectedFields;
   FD_selected=FD_SelectedFields;
   // console.log(FS_Selected,FD_Selected);
@@ -95,11 +93,11 @@ const FreshDeskDropDown = document.getElementById('FreshDeskDropDown');
         this.setAttribute("loading", "true"); 
         try {
             const FD_fieldData = await FD_getTicketFields(url, key);
-              console.log("FreshDesk Field Data:", FD_fieldData);
+              console.log("Freshdesk Field Data:", FD_fieldData);
               populateFieldList(FD_fieldData,"fd");
               await FSconfig();
             const FS_fieldData=await FS_getTicketFields(FS_URL,FS_KEY);
-            console.log("FreshService Field Data:", FS_fieldData);
+            console.log("Freshservice Field Data:", FS_fieldData);
             populateFieldList(FS_fieldData,"fs");
         } catch (error) {
             console.error("Error while fetching fields:", error);
@@ -165,13 +163,13 @@ const FreshDeskDropDown = document.getElementById('FreshDeskDropDown');
 
   function getConfigs(configs){
     // console.log(configs['selectedFields']);
-    console.log(configs);
+    // console.log(configs);
     document.getElementById('url').value=configs['url'];
     document.getElementById('api-key').value=configs['key'];
     document.getElementById('fetchFieldsBtn').click();
     document.getElementById('middleware-url').value=configs['middlewareUrl']
-    document.getElementById('FreshServiceDropDown').setSelectedOptions(configs['FS_Selected']);
-    document.getElementById('FreshDeskDropDown').setSelectedOptions(configs['FD_selected']);  
+    document.getElementById('FreshserviceDropDown').setSelectedOptions(configs['FS_Selected']);
+    document.getElementById('FreshdeskDropDown').setSelectedOptions(configs['FD_selected']);  
   }
    
     
@@ -181,10 +179,10 @@ const FreshDeskDropDown = document.getElementById('FreshDeskDropDown');
 
   function populateFieldList(fieldData,prod) {
     if(prod==="fd"){
-      document.getElementById("FreshDeskDropDown").options=fieldData;
+      document.getElementById("FreshdeskDropDown").options=fieldData;
     }
     if(prod==="fs"){
-      document.getElementById("FreshServiceDropDown").options=fieldData;
+      document.getElementById("FreshserviceDropDown").options=fieldData;
     }
    
   }

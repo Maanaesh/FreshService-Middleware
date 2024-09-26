@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db.js';
 import ticketRoutes from './routes/ticketRoutes.js';
-import freshServiceRoutes from './routes/freshServiceRoutes.js'
+import freshserviceRoutes from './routes/freshserviceRoutes.js'
 import handler from './controller/handler.js';
 import cors from 'cors';
 dotenv.config();
@@ -17,7 +17,7 @@ app.use(cors())
 
 // Routes
 app.use('/api/tickets', ticketRoutes);
-app.use('/api/FreshService',freshServiceRoutes);      
+app.use('/api/freshservice',freshserviceRoutes);      
 
 app.listen(port, async () => {
       await connectDB();
