@@ -6,8 +6,8 @@ import { getConnection } from "../config/db.js";
 export default async function handler(key, url) {
   const conn = await getConnection();
 
-  cron.schedule('*/30 * * * * *', async () => {
-    console.log("running every 30 seconds");
+  cron.schedule('*/5 * * * *', async () => {
+    console.log("running every 5 minutes");
 
     let ticketsToPush = await conn.query(`SELECT * FROM Tickets WHERE pushed_to_freshdesk = 0`);
     ticketsToPush = ticketsToPush[0];
