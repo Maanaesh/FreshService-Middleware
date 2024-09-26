@@ -41,7 +41,7 @@ export const checkColumnExists = async (conn, tableName, columnName) => {
     return rows[0].count > 0;
   };
 
-  export const updatePushedToFreshdesk = async (email,conn) => {
-    const sql = `UPDATE Tickets SET pushed_to_freshdesk = 1 WHERE Email = ?`;
+  export const updatePushedToFreshdesk = async (email,conn,val) => {
+    const sql = `UPDATE Tickets SET pushed_to_freshdesk = ${val} WHERE Email = ?`;
     await conn.query(sql, [email]);
   };

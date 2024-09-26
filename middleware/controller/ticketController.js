@@ -17,7 +17,7 @@ export const createTicket= async (req, res) => {
         }
 
         if (!pushedExists) {
-            await conn.query("ALTER TABLE Tickets ADD pushed_to_freshdesk BIT DEFAULT 0;");
+            await conn.query("ALTER TABLE Tickets ADD pushed_to_freshdesk INT DEFAULT 0;");
         }
 
 

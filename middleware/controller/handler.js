@@ -45,10 +45,15 @@ export default async function handler(key, url) {
 
         if (response.status === 201) {
           console.log("Ticket pushed successfully, status:", response.status);
-          await updatePushedToFreshdesk(formattedTicket.email, conn);
+          await updatePushedToFreshdesk(formattedTicket.email, conn,1);
         }
       } catch (error) {
-        console.error("Error pushing ticket:", error);
+        //console.log(error.response.data);
+        if(error.response.description ==="Validation failed");{
+          console.log("Validation failed for ticket:", formattedTicket.email);
+          await updatePushedToFreshdesk(formattedTicket.email,conn,10)
+        
+        }
       }
     });
   });
