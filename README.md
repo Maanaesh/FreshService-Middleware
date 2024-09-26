@@ -213,13 +213,11 @@ The `handler.js` file is responsible for automating the process of pushing unsyn
 
 ## Scope of Improvements
 
-1. **Ticket Email ID Usage for Updates**:
-   - Currently, the email ID associated with the ticket is used to update tickets. This could cause potential issues, especially if multiple tickets share the same email ID or if tickets need to be differentiated by other fields. It's important to explore alternative, more reliable methods of identifying and updating tickets, such as using unique ticket IDs instead of email addresses.
 
-2. **Bulk Upload of Tickets**:
+1. **Bulk Upload of Tickets**:
    - The current implementation uploads tickets to Freshdesk one at a time via individual API calls. This approach can be inefficient for a large volume of tickets. There is a need to implement a bulk upload mechanism that uploads multiple tickets to Freshdesk in a single API call. This can significantly reduce API request overhead and improve performance, especially when importing tickets from an SQL server.
 
-3. **Handling SQL Data Types**:
+2. **Handling SQL Data Types**:
    - SQL server currently assumes all ticket fields as strings, except for the `status` and `priority` fields. However, Freshdesk ticket fields might have different data types (e.g., dates, numbers, booleans). The implementation should be improved by fetching and dynamically applying the correct field types when processing ticket data from SQL to ensure consistency with Freshdesk’s ticket schema.
 
 ## Screenshot
