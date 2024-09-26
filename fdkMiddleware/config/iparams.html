@@ -16,6 +16,8 @@
     <input type='text' name='url' placeholder='enter url' id="url" />
     <label>Enter API Key</label>
     <input type='password' name='key' placeholder='' id="api-key" />
+    <label>MiddleWare URL</label>
+    <input type='text'  placeholder='' id="middleware-url" />
     
     <fw-button id="fetchFieldsBtn" loading="false">Validate Details</fw-button>
     <label for="FreshServiceDropDown">Freshservice Fields</label>
@@ -167,7 +169,7 @@ const FreshDeskDropDown = document.getElementById('FreshDeskDropDown');
     document.getElementById('url').value=configs['url'];
     document.getElementById('api-key').value=configs['key'];
     document.getElementById('fetchFieldsBtn').click();
-    
+    document.getElementById('middleware-url').value=configs['middlewareUrl']
     document.getElementById('FreshServiceDropDown').setSelectedOptions(configs['FS_Selected']);
     document.getElementById('FreshDeskDropDown').setSelectedOptions(configs['FD_selected']);  
   }
@@ -190,7 +192,7 @@ const FreshDeskDropDown = document.getElementById('FreshDeskDropDown');
   function postConfigs() {
     const url = document.getElementById('url').value;
     const key = document.getElementById('api-key').value;
-    
+    const middlewareUrl = document.getElementById('middleware-url').value;
     if (!validate(url, key)) {
         return; 
     }
@@ -201,6 +203,7 @@ const FreshDeskDropDown = document.getElementById('FreshDeskDropDown');
       fieldmap: mappedFields, 
       FD_selected,
       FS_Selected,
+      middlewareUrl,
 
     };
   }

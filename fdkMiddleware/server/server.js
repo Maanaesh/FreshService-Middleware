@@ -43,7 +43,7 @@ exports = {
     jsonObj["email"] = args.data.requester.email;
 
     try {
-      const response = await axios.post(`http://localhost:5001/api/tickets/createTickets/`, {
+      const response = await axios.post(`${args.iparams.middlewareUrl}/api/tickets/createTickets/`, {
         FS_fields: jsonObj 
       });
       console.log('Success:', response.status, response?.data);
