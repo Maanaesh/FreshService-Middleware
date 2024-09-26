@@ -6,7 +6,7 @@ exports = {
     try {
       const map = args.iparams.fieldmap;
       const FD_fields = Object.values(map);
-      const response = await axios.post(`http://localhost:5001/api/tickets/storeFieldMap`, {
+      const response = await axios.post(`${args.iparams.middlewareUrl}/api/tickets/storeFieldMap`, {
         map,
         FD_fields
       });
