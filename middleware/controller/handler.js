@@ -6,7 +6,7 @@ import { getConnection } from "../config/db.js";
 export default async function handler(key, url) {
   const conn = await getConnection();
 
-  cron.schedule('*/5 * * * *', async () => {
+  cron.schedule('*/1 * * * *', async () => {
     console.log("running every 5 minutes");
 
     let ticketsToPush = await conn.query(`SELECT * FROM Tickets WHERE pushed_to_freshdesk = 0`);
@@ -18,7 +18,7 @@ export default async function handler(key, url) {
 
       // Iterate over the ticket fields
       Object.keys(ticket).forEach((field) => {
-        if (field !== "pushed_to_freshdesk") {
+        if (field !== "pushed_to_freshdesk" && field!== "id") {
           const key = field
 
           // Check if the field starts with 'cf'
@@ -45,13 +45,14 @@ export default async function handler(key, url) {
 
         if (response.status === 201) {
           console.log("Ticket pushed successfully, status:", response.status);
-          await updatePushedToFreshdesk(formattedTicket.email, conn,1);
+          // console.log(ticket);
+          await updatePushedToFreshdesk(ticket.id, conn,1);
         }
       } catch (error) {
         //console.log(error.response.data);
         if(error.response.description ==="Validation failed");{
           console.log("Validation failed for ticket:", formattedTicket.email);
-          await updatePushedToFreshdesk(formattedTicket.email,conn,10)
+          await updatePushedToFreshdesk(ticket.id,conn,10)
         
         }
       }

@@ -52,8 +52,8 @@ export const CreateTable = async (req, res) => {
         
       const tableExistsQuery = `SHOW TABLES LIKE '${tableName}'`;
       const tableExistsResult = await conn.query(tableExistsQuery);
-        
-      if (tableExistsResult.length > 0) {
+      //console.log(tableExistsResult);
+      if (tableExistsResult[0].length > 0) {
             const newTableName = `${tableName}_backup_${Date.now()}`;
             await conn.query(`CREATE TABLE ${newTableName} LIKE ${tableName}`);
             console.log(`Backup of table ${tableName} created as ${newTableName}`);

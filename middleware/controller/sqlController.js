@@ -1,15 +1,20 @@
 import { getConnection } from "../config/db.js";
 
 export function createTableSQL(tableName, fields) {
-    const columns = fields.map(field => {
-        if (field.toLowerCase() === 'status' || field.toLowerCase() === 'priority' || field.toLowerCase()==="status") {
-            return `${field} INT`;
-        }
-        return `${field} VARCHAR(255)`; 
-    }).join(', ');
+  // Define the primary key column as `key` with AUTO_INCREMENT
+  const primaryKeyColumn = `id INT AUTO_INCREMENT PRIMARY KEY`;
 
-    const createTableSQL = `CREATE TABLE ${tableName} (${columns});`;
-    return createTableSQL;
+  // Map other fields to their respective SQL definitions
+  const columns = fields.map(field => {
+      if (field.toLowerCase() === 'status' || field.toLowerCase() === 'priority') {
+          return `${field} INT`;
+      }
+      return `${field} VARCHAR(255)`; 
+  }).join(', ');
+
+  // Combine the primary key and other columns
+  const createTableSQL = `CREATE TABLE ${tableName} (${primaryKeyColumn}, ${columns});`;
+  return createTableSQL;
 }
 
 
@@ -17,7 +22,9 @@ export function createTableSQL(tableName, fields) {
     
     const conn = await getConnection();
     const [columns] = await conn.query(`SHOW COLUMNS FROM Tickets`);
-    const tableFields = columns.map(col => col.Field);
+    const tableFields = columns
+  .filter(col => col.Field !== 'id')
+  .map(col => col.Field);
     const values = Object.values(ticket);
  
 
@@ -41,7 +48,7 @@ export const checkColumnExists = async (conn, tableName, columnName) => {
     return rows[0].count > 0;
   };
 
-  export const updatePushedToFreshdesk = async (email,conn,val) => {
-    const sql = `UPDATE Tickets SET pushed_to_freshdesk = ${val} WHERE Email = ?`;
-    await conn.query(sql, [email]);
+  export const updatePushedToFreshdesk = async (id,conn,val) => {
+    const sql = `UPDATE Tickets SET pushed_to_freshdesk = ${val} WHERE id = ?`;
+    await conn.query(sql, [id]);
   };
