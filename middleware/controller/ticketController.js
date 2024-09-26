@@ -4,18 +4,16 @@ import { checkColumnExists, createTableSQL, insertTicket } from './sqlController
 
 export const createTicket= async (req, res) => {
     const ticket = req.body.FS_fields;
-
-
     ticket.pushed_to_freshdesk = 0;
     console.log(ticket);
 
     try {
         const conn = await getConnection();
         // Check if the columns already exist
-        const emailExists = await checkColumnExists(conn, 'Tickets', 'Email');
+        const emailExists = await checkColumnExists(conn, 'Tickets', 'email');
         const pushedExists = await checkColumnExists(conn, 'Tickets', 'pushed_to_freshdesk');
         if (!emailExists) {
-            await conn.query("ALTER TABLE Tickets ADD Email VARCHAR(255);");
+            await conn.query("ALTER TABLE Tickets ADD email VARCHAR(255);");
         }
 
         if (!pushedExists) {
@@ -23,7 +21,7 @@ export const createTicket= async (req, res) => {
         }
 
 
-        const sql = insertTicket(ticket);
+        const sql = await insertTicket(ticket);
         await conn.query(sql);
 
         res.status(200).json({ message: 'Ticket stored successfully' });

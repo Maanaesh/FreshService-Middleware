@@ -1,3 +1,5 @@
+import { getConnection } from "../config/db.js";
+
 export function createTableSQL(tableName, fields) {
     const columns = fields.map(field => {
         if (field.toLowerCase() === 'status' || field.toLowerCase() === 'priority' || field.toLowerCase()==="status") {
@@ -11,13 +13,15 @@ export function createTableSQL(tableName, fields) {
 }
 
 
-  export const insertTicket = (ticket) => {
+  export const insertTicket = async (ticket) => {
     
-    const fields = Object.keys(ticket);
+    const conn = await getConnection();
+    const [columns] = await conn.query(`SHOW COLUMNS FROM Tickets`);
+    const tableFields = columns.map(col => col.Field);
     const values = Object.values(ticket);
-  
+ 
 
-    const fieldsString = fields.join(', ');
+    const fieldsString = tableFields.join(', ');
     
    
     const valuesString = values.map(value => {

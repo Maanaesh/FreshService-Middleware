@@ -125,7 +125,7 @@ const FreshDeskDropDown = document.getElementById('FreshDeskDropDown');
       res.data.forEach(element => {
         data.push({
           id:element.id,
-          name: element.label || element.name,
+          name:element.name,
         });
       });
       return data;
@@ -151,7 +151,7 @@ const FreshDeskDropDown = document.getElementById('FreshDeskDropDown');
       ticket_fields.forEach(element => {
         data.push({
           id:element.id,
-          name: element.label || element.name,
+          name:element.name,
         });
       });
       return data;
